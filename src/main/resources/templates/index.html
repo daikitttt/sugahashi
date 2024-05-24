@@ -13,41 +13,48 @@
 	</header>
 	<main>
 		<section class="top">
-			<nav class="top-list">
-				<ul>
-					<li>卵</li>
-					<li>納豆</li>
-					<li>チーズ</li>
-				</ul>
-			</nav>
+			
+			<form method="get" action="#" th:action="@{/top}">
+						<input type="submit" value="上段へ">
+					</form>
+			<ul>
+				<li>卵</li>
+				<li>納豆</li>
+				<li>チーズ</li>
+			</ul>
+
 		</section>
 		<section class="middle">
-			<nav class="middle-list">
-				<ul>
-					<li>アイス</li>
-					<li>枝豆</li>
-					<li>お肉</li>
-				</ul>
-			</nav>
+
+			<form method="get" action="#" th:action="@{/middle}">
+									<input type="submit" value="中段へ">
+								</form>
+			<ul>
+				<li>アイス</li>
+				<li>枝豆</li>
+				<li>お肉</li>
+			</ul>
 
 		</section>
 		<section class="bottom">
-			<nav class="bottom-list">
-				<ul>
-					<li>キャベツ</li>
-					<li>トマト</li>
-					<li>にら</li>
-				</ul>
-			</nav>
+			<form method="get" action="#" th:action="@{/bottom}">
+									<input type="submit" value="下段へ">
+								</form>
+			<ul>
+				<li>キャベツ</li>
+				<li>トマト</li>
+				<li>にら</li>
+			</ul>
+
 
 		</section>
-		
+
 
 	</main>
 	<footer>
-		<a href="#" class="button-link">
-		        <button>リンクボタン</button>
-		    </a>
+		<form method="get" action="#" th:action="@{/input}">
+			<input type="submit" value="入力画面へ">
+		</form>
 	</footer>
 
 </body>
