@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<script src="main.js" th:src="@{/main.js}"></script>
+<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+</head>
+<body>
+	<h1 th:text="${title}"></h1>
+	<form method="get" action="#" th:action="@{/confirm}"th:object="${form}" >
+	入れる物：<input type="text" name="name1">
+	<select name="place">
+	<option value="top">上段</option>
+	<option value="middle">中段</option>
+	<option value="bottom">下段</option>
+	</select>
+	<input type="submit" value="登録する">
+	</form>
+
+</body>
+</html>
+
+
+
