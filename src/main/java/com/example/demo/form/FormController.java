@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dao.SampleDao;
@@ -74,7 +75,14 @@ public class FormController {
 		model.addAttribute("title", "下段"); 
 		List<EntForm> list3 = sampledao.searchDb3();
 		model.addAttribute("dbList3",list3);
+		List<EntForm> list4 = sampledao.searchDb4();
+		model.addAttribute("dbList4",list4);
 		return "form/bottom";
+	}
+	@RequestMapping("/del/{id}")
+	public String destory(@PathVariable Long id) {
+		sampledao.deleteDb(id);
+		return "redirect:/index";
 	}
 	
 	////////////////////////////

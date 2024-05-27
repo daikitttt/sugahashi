@@ -37,6 +37,32 @@ public class SampleDao {
 //		
 //	}
 //	
+	public List<EntForm> searchDb4(){
+
+		String sql = "SELECT * FROM sample";
+
+		//データベースから取り出したデータをresultDB1に入れる
+		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
+
+		//画面に表示しやすい形のList(resultDB2)を用意
+		List<EntForm> resultDb2 = new ArrayList<EntForm>();
+
+		//1件ずつピックアップ
+		for(Map<String,Object> result1:resultDb1) {
+
+			//データ1件分を1つのまとまりとしたEntForm型の「entformdb」を生成
+			EntForm entformdb = new EntForm();
+
+			//id、nameのデータをentformdbに移す
+			entformdb.setId((int)result1.get("id"));
+			entformdb.setName((String)result1.get("name"));
+			entformdb.setPlace((String)result1.get("place"));
+			//移し替えたデータを持ったentformdbを、resultDB2に入れる
+			resultDb2.add(entformdb);
+		}
+		return resultDb2;
+	}
+	
 	public List<EntForm> searchDb(){
 
 		String sql = "SELECT * FROM sample where place='top'";
@@ -121,13 +147,7 @@ public class SampleDao {
 		return resultDb2;
 	}
 	
-	//削除(DELETE)
-		public void deleteDb(Long id) {
-			//コンソールに表示
-			System.out.println("削除しました");
-			//DBからデータを削除
-			db.update("delete from sample where id=?", id);
-		}
+	
 		//更新画面の表示(SELECT)
 		public List<EntForm> selectOne(Long id) {
 
