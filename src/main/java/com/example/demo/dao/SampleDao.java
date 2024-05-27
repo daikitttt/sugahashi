@@ -1,5 +1,6 @@
 package com.example.demo.dao;
 
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,7 +23,7 @@ public class SampleDao {
 	}
 	public void insertDb(EntForm entform) {
 
-		db.update("INSERT INTO sample (name,place) VALUES(?,?)", entform.getName(),entform.getPlace());
+		db.update("INSERT INTO sample (name,place,syoumikigen) VALUES(?,?,?)", entform.getName(),entform.getPlace(),entform.getDate());
 		
 	}//public List<EntForm> searchDb(){
 //
