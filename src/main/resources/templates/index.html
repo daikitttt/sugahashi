@@ -32,22 +32,21 @@
 			<form method="get" action="#" th:action="@{/middle}">
 									<input type="submit" value="中段へ">
 								</form>
-			<ul>
-				<li>アイス</li>
-				<li>枝豆</li>
-				<li>お肉</li>
-			</ul>
+								
+		<ul th:each="res : ${dbList2}">
+				<li th:text="${res.name}">名前</li>
+		</ul>
+												
 
 		</section>
 		<section class="bottom">
 			<form method="get" action="#" th:action="@{/bottom}">
 									<input type="submit" value="下段へ">
 								</form>
-			<ul>
-				<li>キャベツ</li>
-				<li>トマト</li>
-				<li>にら</li>
+			<ul th:each="res : ${dbList3}">
+					<li th:text="${res.name}">名前</li>
 			</ul>
+												
 
 
 		</section>

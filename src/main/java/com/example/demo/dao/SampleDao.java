@@ -20,17 +20,17 @@ public class SampleDao {
 		this.db = db;
 	}
 	public void insertDb(EntForm entform) {
-<<<<<<< HEAD
+
 		db.update("INSERT INTO sample (name,place) VALUES(?,?)", entform.getName(),entform.getPlace());
 		
-	}public List<EntForm> searchDb(){
-=======
-	    try {
-	        db.update("INSERT INTO sample(name,place) VALUES(?, ?)", entform.getName(), entform.getPlace());
-	    } catch (Exception e) {
-	        e.printStackTrace(); // 例外を標準エラー出力に出力
-	    }
-	}
+	}//public List<EntForm> searchDb(){
+//
+//	    try {
+//	        db.update("INSERT INTO sample(name,place) VALUES(?, ?)", entform.getName(), entform.getPlace());
+//	    } catch (Exception e) {
+//	        e.printStackTrace(); // 例外を標準エラー出力に出力
+//	    }
+//	}
 
 //	public void insertDb(EntForm entform) {
 //		db.update("INSERT INTO * VALUES(?,?)", entform.getName(),entform.getPlace());
@@ -38,8 +38,8 @@ public class SampleDao {
 //	}
 //	
 	public List<EntForm> searchDb(){
->>>>>>> origin/ayano-branch
-		String sql = "SELECT * FROM sample";
+
+		String sql = "SELECT * FROM sample where place='top'";
 
 		//データベースから取り出したデータをresultDB1に入れる
 		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
@@ -65,7 +65,61 @@ public class SampleDao {
 		return resultDb2;
 	}
 	
+	public List<EntForm> searchDb2(){
+
+		String sql = "SELECT * FROM sample where place='middle'";
+
+		//データベースから取り出したデータをresultDB1に入れる
+		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
+
+		//画面に表示しやすい形のList(resultDB2)を用意
+		List<EntForm> resultDb2 = new ArrayList<EntForm>();
+
+		//1件ずつピックアップ
+		for(Map<String,Object> result1:resultDb1) {
+
+			//データ1件分を1つのまとまりとしたEntForm型の「entformdb」を生成
+			EntForm entformdb = new EntForm();
+
+			//id、nameのデータをentformdbに移す
+			entformdb.setId((int)result1.get("id"));
+			entformdb.setName((String)result1.get("name"));
+			entformdb.setPlace((String)result1.get("place"));
+			//移し替えたデータを持ったentformdbを、resultDB2に入れる
+			resultDb2.add(entformdb);
+		}
+
+		//Controllerに渡す
+		return resultDb2;
+	}
 	
+	public List<EntForm> searchDb3(){
+
+		String sql = "SELECT * FROM sample where place='bottom'";
+
+		//データベースから取り出したデータをresultDB1に入れる
+		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
+
+		//画面に表示しやすい形のList(resultDB2)を用意
+		List<EntForm> resultDb2 = new ArrayList<EntForm>();
+
+		//1件ずつピックアップ
+		for(Map<String,Object> result1:resultDb1) {
+
+			//データ1件分を1つのまとまりとしたEntForm型の「entformdb」を生成
+			EntForm entformdb = new EntForm();
+
+			//id、nameのデータをentformdbに移す
+			entformdb.setId((int)result1.get("id"));
+			entformdb.setName((String)result1.get("name"));
+			entformdb.setPlace((String)result1.get("place"));
+			//移し替えたデータを持ったentformdbを、resultDB2に入れる
+			resultDb2.add(entformdb);
+		}
+
+		//Controllerに渡す
+		return resultDb2;
+	}
 	
 	//削除(DELETE)
 		public void deleteDb(Long id) {

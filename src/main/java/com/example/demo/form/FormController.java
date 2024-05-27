@@ -5,9 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.view.RedirectView;
 
 import com.example.demo.dao.SampleDao;
 import com.example.demo.entity.EntForm;
@@ -39,6 +37,10 @@ public class FormController {
 		List<EntForm> list = sampledao.searchDb();
 		model.addAttribute("dbList",list);
 		model.addAttribute("title","一覧ページ");
+		List<EntForm> list2 = sampledao.searchDb2();
+		model.addAttribute("dbList2",list2);
+		List<EntForm> list3 = sampledao.searchDb3();
+		model.addAttribute("dbList3",list3);
 		return "index";
 	}
 	@RequestMapping("/input")
@@ -72,29 +74,7 @@ public class FormController {
 	////////////////////////////
 	
 
-    @GetMapping("/redirectByPlace")
-    public RedirectView redirectByPlace() {
-        // データベースから place の値を取得
-    	EntForm entform = new EntForm();
-        String basyo = entform.getPlace();
-
-        // place の値に応じてリダイレクト先を決定
-        String redirectUrl;
-        switch (basyo) {
-            case "top":
-                redirectUrl = "redirect:/top.html";
-                break;
-            case "middle":
-                redirectUrl = "redirect:/middle.html";
-                break;
-            default:
-                redirectUrl = "redirect:/bottom.html"; // place に対するデフォルトのリダイレクト先を指定
-                break;
-        }
-
-        // リダイレクト実行
-        return new RedirectView(redirectUrl);
-    }
+    
 
 	
 }
