@@ -2,11 +2,14 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class EntForm {
 	private int id;
 	private String name;
 	private String place;
-	private Date date;
+	@DateTimeFormat(pattern = "yyyy-MM-dd") // フォーマットを指定
+	private Date syoumkigen;
 
 	public EntForm() {}
 
@@ -32,11 +35,11 @@ public class EntForm {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public Date getDate() {
-		return date;
+	public Date getSyoumkigen() {
+		return syoumkigen;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setSyoumkigen(Date syoumkigen) {
+		this.syoumkigen = syoumkigen;
 	}
 }

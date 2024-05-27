@@ -23,7 +23,7 @@ public class SampleDao {
 	}
 	public void insertDb(EntForm entform) {
 
-		db.update("INSERT INTO sample (name,place,syoumikigen) VALUES(?,?,?)", entform.getName(),entform.getPlace(),entform.getDate());
+		db.update("INSERT INTO sample (name,place,syoumikigen) VALUES(?,?,?)", entform.getName(),entform.getPlace(),entform.getSyoumkigen());
 		
 	}//public List<EntForm> searchDb(){
 //
@@ -58,8 +58,7 @@ public class SampleDao {
 			//id、nameのデータをentformdbに移す
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
-			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setDate((Date)result1.get("date"));
+			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -86,7 +85,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setDate((Date)result1.get("date"));
+			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -115,7 +114,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setDate((Date)result1.get("date"));
+			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -144,7 +143,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setDate((Date)result1.get("date"));
+			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
