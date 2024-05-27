@@ -39,6 +39,12 @@ public class FormController {
 		model.addAttribute("title", "下段"); 
 		return "form/bottom";
 	}
+	
+	@RequestMapping("/complete")
+	public String complete(Model model, Form form) {
+		model.addAttribute("title", "登録完了"); 
+		return "form/complete";
+	}
 
 
 	
