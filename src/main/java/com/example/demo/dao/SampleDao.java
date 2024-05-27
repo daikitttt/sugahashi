@@ -19,12 +19,21 @@ public class SampleDao {
 	public SampleDao(JdbcTemplate db) {
 		this.db = db;
 	}
-
 	public void insertDb(EntForm entform) {
-		db.update("INSERT INTO sample (name,place) VALUES(?,?)", entform.getName(),entform.getPlace());
-		
-	}public List<EntForm> searchDb(){
-		String sql = "SELECT (name, place) FROM sample";
+	    try {
+	        db.update("INSERT INTO sample(name) VALUES(?, ?)", entform.getName(), entform.getPlace());
+	    } catch (Exception e) {
+	        e.printStackTrace(); // 例外を標準エラー出力に出力
+	    }
+	}
+
+//	public void insertDb(EntForm entform) {
+//		db.update("INSERT INTO * VALUES(?,?)", entform.getName(),entform.getPlace());
+//		
+//	}
+//	
+	public List<EntForm> searchDb(){
+		String sql = "SELECT * FROM sample";
 
 		//データベースから取り出したデータをresultDB1に入れる
 		List<Map<String, Object>> resultDb1 = db.queryForList(sql);

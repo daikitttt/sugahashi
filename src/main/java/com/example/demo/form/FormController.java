@@ -5,10 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.example.demo.dao.SampleDao;
 import com.example.demo.entity.EntForm;
+
 
 @Controller
 public class FormController {
@@ -20,7 +23,7 @@ public class FormController {
 		this.sampledao = sampledao;
 	}
 
-	//完了の処理
+	//完了の
 	@RequestMapping ("/complete")
 	public String complete(Form form, Model model){
 		EntForm entform = new EntForm();
@@ -66,6 +69,32 @@ public class FormController {
 		return "form/bottom";
 	}
 	
+	////////////////////////////
+	
+
+    @GetMapping("/redirectByPlace")
+    public RedirectView redirectByPlace() {
+        // データベースから place の値を取得
+    	EntForm entform = new EntForm();
+        String basyo = entform.getPlace();
+
+        // place の値に応じてリダイレクト先を決定
+        String redirectUrl;
+        switch (basyo) {
+            case "top":
+                redirectUrl = "redirect:/top.html";
+                break;
+            case "middle":
+                redirectUrl = "redirect:/middle.html";
+                break;
+            default:
+                redirectUrl = "redirect:/bottom.html"; // place に対するデフォルトのリダイレクト先を指定
+                break;
+        }
+
+        // リダイレクト実行
+        return new RedirectView(redirectUrl);
+    }
 
 	
 }
