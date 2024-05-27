@@ -1,9 +1,12 @@
 package com.example.demo.entity;
 
+import java.util.Date;
+
 public class EntForm {
 	private int id;
 	private String name;
 	private String place;
+	private Date date;
 
 	public EntForm() {}
 
@@ -28,5 +31,12 @@ public class EntForm {
 
 	public void setPlace(String place) {
 		this.place = place;
+	}
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 }

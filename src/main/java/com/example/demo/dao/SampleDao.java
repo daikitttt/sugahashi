@@ -1,6 +1,7 @@
 package com.example.demo.dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -57,6 +58,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
+			entformdb.setDate((Date)result1.get("date"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -83,6 +85,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
+			entformdb.setDate((Date)result1.get("date"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -111,6 +114,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
+			entformdb.setDate((Date)result1.get("date"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -139,6 +143,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
+			entformdb.setDate((Date)result1.get("date"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
