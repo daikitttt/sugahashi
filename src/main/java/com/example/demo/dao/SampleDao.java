@@ -24,7 +24,7 @@ public class SampleDao {
 		db.update("INSERT INTO sample (name,place) VALUES(?,?)", entform.getName(),entform.getPlace());
 		
 	}public List<EntForm> searchDb(){
-		String sql = "SELECT (name, place) FROM sample";
+		String sql = "SELECT * FROM sample";
 
 		//データベースから取り出したデータをresultDB1に入れる
 		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
@@ -49,6 +49,9 @@ public class SampleDao {
 		//Controllerに渡す
 		return resultDb2;
 	}
+	
+	
+	
 	//削除(DELETE)
 		public void deleteDb(Long id) {
 			//コンソールに表示
