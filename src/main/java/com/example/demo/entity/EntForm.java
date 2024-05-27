@@ -3,7 +3,7 @@ package com.example.demo.entity;
 public class EntForm {
 	private int id;
 	private String name;
-	private String age;
+	private String place;
 
 	public EntForm() {}
 
@@ -23,10 +23,10 @@ public class EntForm {
 		this.name = name;
 	}
 	public String getPlace() {
-		return age;
+		return place;
 	}
 
 	public void setPlace(String age) {
-		this.age = age;
+		this.place = age;
 	}
 }

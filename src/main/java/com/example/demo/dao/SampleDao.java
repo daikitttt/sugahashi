@@ -24,7 +24,7 @@ public class SampleDao {
 		db.update("INSERT INTO sample (name,place) VALUES(?,?)", entform.getName(),entform.getPlace());
 		
 	}public List<EntForm> searchDb(){
-		String sql = "SELECT * FROM sample";
+		String sql = "SELECT (name, place) FROM sample";
 
 		//データベースから取り出したデータをresultDB1に入れる
 		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
@@ -41,7 +41,7 @@ public class SampleDao {
 			//id、nameのデータをentformdbに移す
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
-
+			entformdb.setPlace((String)result1.get("place"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}

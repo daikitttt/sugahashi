@@ -1,5 +1,7 @@
 package com.example.demo.form;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +33,9 @@ public class FormController {
 	@RequestMapping("/index")
 	public String index(Model model, Form form) {
 		model.addAttribute("message", "ホーム"); 
+		List<EntForm> list = sampledao.searchDb();
+		model.addAttribute("dbList",list);
+		model.addAttribute("title","一覧ページ");
 		return "index";
 	}
 	@RequestMapping("/input")
@@ -61,12 +66,6 @@ public class FormController {
 		return "form/bottom";
 	}
 	
-	@RequestMapping("/complete")
-	public String complete(Model model, Form form) {
-		model.addAttribute("title", "登録完了"); 
-		return "form/complete";
-	}
-
 
 	
 }

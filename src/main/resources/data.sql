@@ -1,0 +1,1 @@
+INSERT INTO sample (name,place) VALUES ('taro','32');
