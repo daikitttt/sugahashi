@@ -26,7 +26,7 @@ public class EntForm {
 		return place;
 	}
 
-	public void setPlace(String age) {
-		this.place = age;
+	public void setPlace(String place) {
+		this.place = place;
 	}
 }

@@ -17,12 +17,10 @@
 			<form method="get" action="#" th:action="@{/top}">
 						<input type="submit" value="上段へ">
 					</form>
-					<th:each="res : ${dbList}">
-							<td th:text="${res.id}">1</td>
-							<td th:text="${res.name}">1</td>
-							<td th:text="${res.place}">1</td>
-							
-					</th:each>
+					<tr th:each="res : ${dbList}">
+<!--							<td th:text="${res.id}">1</td>-->
+							<td th:text="${res.name}">名前</td>
+					</tr>
 
 		</section>
 		<section class="middle">
