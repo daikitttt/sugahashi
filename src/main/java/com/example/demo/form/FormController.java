@@ -1,11 +1,32 @@
 package com.example.demo.form;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.dao.SampleDao;
+import com.example.demo.entity.EntForm;
+
 @Controller
 public class FormController {
+	
+	private final SampleDao sampledao;
+
+	@Autowired
+	public FormController(SampleDao sampledao) {
+		this.sampledao = sampledao;
+	}
+
+	//完了の処理
+	@RequestMapping ("/complete")
+	public String complete(Form form, Model model){
+		EntForm entform = new EntForm();
+		entform.setName(form.getName1());
+		entform.setPlace(form.getPlace());
+		sampledao.insertDb(entform);
+		return "form/complete";
+	}
 	
 	@RequestMapping("/index")
 	public String index(Model model, Form form) {
@@ -38,12 +59,6 @@ public class FormController {
 	public String bottom(Model model, Form form) {
 		model.addAttribute("title", "下段"); 
 		return "form/bottom";
-	}
-	
-	@RequestMapping("/complete")
-	public String complete(Model model, Form form) {
-		model.addAttribute("title", "登録完了"); 
-		return "form/complete";
 	}
 
 
