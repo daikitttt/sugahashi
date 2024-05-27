@@ -2,10 +2,15 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class EntForm {
 	private int id;
 	private String name;
 	private String place;
+	
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date date;
 
 	public EntForm() {}
