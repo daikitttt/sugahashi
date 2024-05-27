@@ -17,6 +17,7 @@
 
 		<ul th:each="res : ${dbList2}">
 			<li th:text="${res.name}">名前</li>
+			<li th:text="${res.date}">賞味期限</li>
 			<li>
 				<form th:action="@{/del/{id}(id=${res.id})}">
 					<input type="submit" value="削除" />

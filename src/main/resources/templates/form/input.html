@@ -9,6 +9,10 @@
 
 <body>
 	<h1 th:text="${title}"></h1>
+	<form 	method="get"action="#"	th:action="@{/confirm}" th:object="${form}" >
+		賞味期限：<input type="date" name="date1">
+	    
+	    </form>
 	<form method="get" action="#" th:action="@{/confirm}" th:object="${form}">
 		入れる物：<input type="text" name="name1">
 		<select name="place">
