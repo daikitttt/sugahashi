@@ -26,7 +26,7 @@ public class SampleDao {
 	}public List<EntForm> searchDb(){
 =======
 	    try {
-	        db.update("INSERT INTO sample(name) VALUES(?, ?)", entform.getName(), entform.getPlace());
+	        db.update("INSERT INTO sample(name,place) VALUES(?, ?)", entform.getName(), entform.getPlace());
 	    } catch (Exception e) {
 	        e.printStackTrace(); // 例外を標準エラー出力に出力
 	    }
