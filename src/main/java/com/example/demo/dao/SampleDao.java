@@ -152,6 +152,15 @@ public class SampleDao {
 			//Controllerに渡す
 			return resultDb2;
 		}
+		
+		//削除(DELETE)
+				public void deleteDb(Long id) {
+					//コンソールに表示
+					System.out.println("削除しました");
+					//DBからデータを削除
+					db.update("delete from sample where id=?", id);
+				}
+		
 		//更新の実行(UPDATE)
 		public void updateDb(Long id, EntForm entform) {
 			//コンソールに表示
