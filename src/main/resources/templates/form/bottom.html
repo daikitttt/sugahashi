@@ -9,11 +9,15 @@
 
 <body>
 	<h1 th:text="${title}"></h1>
-	<ul>
-		<li>キャベツ</li>
-		<li>トマト</li>
-		<li>にら</li>
-	</ul>
+	<section class="bottom">
+		<form method="get" action="#" th:action="@{/bottom}">
+			<input type="submit" value="下段へ">
+		</form>
+		<ul th:each="res : ${dbList3}">
+			<li th:text="${res.name}">名前</li>
+		</ul>
+	</section>
+
 	<form method="get" action="#" th:action="@{/input}">
 		<input type="submit" value="入力画面へ">
 	</form>

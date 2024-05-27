@@ -9,11 +9,16 @@
 
 <body>
 	<h1 th:text="${title}"></h1>
-	<ul>
-		<li>卵</li>
-		<li>納豆</li>
-		<li>チーズ</li>
-	</ul>
+	<section class="top">
+
+		<form method="get" action="#" th:action="@{/top}">
+			<input type="submit" value="上段へ">
+		</form>
+
+		<ul th:each="res : ${dbList1}">
+			<li th:text="${res.name}">名前</li>
+		</ul>
+	</section>
 	<form method="get" action="#" th:action="@{/input}">
 		<input type="submit" value="入力画面へ">
 	</form>
