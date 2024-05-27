@@ -4,6 +4,7 @@ public class Form {
 	
 	private String name1;
 	private String place;
+
 	public Form() {}
 	public String getName1() {
 		return name1;
@@ -17,4 +18,5 @@ public class Form {
 	public void setPlace(String place) {
 		this.place = place;
 	}
+	
 }
