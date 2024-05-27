@@ -1,7 +1,5 @@
 package com.example.demo.form;
 
-import java.util.Date;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Form {
@@ -9,7 +7,7 @@ public class Form {
 	private String name1;
 	private String place;
 	@DateTimeFormat(pattern = "yyyy-MM-dd") // フォーマットを指定
-	private Date syoumkigen;
+	private String syoumkigen;
 
 	public Form() {}
 	public String getName1() {
@@ -24,10 +22,10 @@ public class Form {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public Date getSyoumkigen() {
+	public String getSyoumkigen() {
 		return syoumkigen;
 	}
-	public void setSyoumkigen(Date syoumkigen) {
+	public void setSyoumkigen(String syoumkigen) {
 		this.syoumkigen = syoumkigen;
 	}
 	

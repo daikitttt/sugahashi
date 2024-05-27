@@ -2,7 +2,6 @@ package com.example.demo.dao;
 
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -23,7 +22,7 @@ public class SampleDao {
 	}
 	public void insertDb(EntForm entform) {
 
-		db.update("INSERT INTO sample (name,place,syoumikigen) VALUES(?,?,?)", entform.getName(),entform.getPlace(),entform.getSyoumkigen());
+		db.update("INSERT INTO sample (name,place,syoumkigen) VALUES(?,?,?)", entform.getName(),entform.getPlace(),entform.getSyoumkigen());
 		
 	}//public List<EntForm> searchDb(){
 //
@@ -58,7 +57,7 @@ public class SampleDao {
 			//id、nameのデータをentformdbに移す
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
-			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
+			entformdb.setSyoumkigen((String)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -85,7 +84,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
+			entformdb.setSyoumkigen((String)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -114,7 +113,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
+			entformdb.setSyoumkigen((String)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -143,7 +142,7 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setSyoumkigen((Date)result1.get("syoumkigen"));
+			entformdb.setSyoumkigen((String)result1.get("syoumkigen"));
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
