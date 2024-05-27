@@ -2,11 +2,14 @@ package com.example.demo.form;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Form {
 	
 	private String name1;
 	private String place;
-	private Date date1;
+	@DateTimeFormat(pattern = "yyyy-MM-dd") // フォーマットを指定
+	private Date syoumkigen;
 
 	public Form() {}
 	public String getName1() {
@@ -21,11 +24,11 @@ public class Form {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public Date getDate() {
-		return date1;
+	public Date getSyoumkigen() {
+		return syoumkigen;
 	}
-	public void setDate(Date date1) {
-		this.date1 = date1;
+	public void setSyoumkigen(Date syoumkigen) {
+		this.syoumkigen = syoumkigen;
 	}
 	
 }

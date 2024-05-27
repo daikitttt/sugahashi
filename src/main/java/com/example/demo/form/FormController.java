@@ -28,6 +28,7 @@ public class FormController {
 		EntForm entform = new EntForm();
 		entform.setName(form.getName1());
 		entform.setPlace(form.getPlace());
+		entform.setSyoumkigen(form.getSyoumkigen());
 		sampledao.insertDb(entform);
 		return "form/complete";
 	}
