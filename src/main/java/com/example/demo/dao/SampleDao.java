@@ -216,7 +216,6 @@ public class SampleDao {
 				//id、nameのデータをentformdbに移す
 				entformdb.setId((int)result1.get("id"));
 				entformdb.setName((String)result1.get("name"));
-				entformdb.setSyoumkigen((String)result1.get("Syoumkigen"));
 				//移し替えたデータを持ったentformdbを、resultDB2に入れる
 				resultDb2.add(entformdb);
 			}
