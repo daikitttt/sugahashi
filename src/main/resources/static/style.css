@@ -1,0 +1,20 @@
+.block {
+  color: #fff;
+  text-align: center;
+  width: 1000px;
+  background: #000;
+  margin: 0 auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+h1 {
+	color: blue;
+}
+@media (max-width: 768px) {
+/* スマホ専用のCSSを書く場所 */
+
+  .block {
+    width: 100%;
+  }
+
+}
