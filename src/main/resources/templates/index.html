@@ -9,57 +9,49 @@
 
 <body>
 	<header>
-		<h1>アプリ名</h1>
-	</header>
-	<main>
-		<section class="top">
-			
-			<form method="get" action="#" th:action="@{/top}">
-						<input type="submit" value="上段へ">
-					</form>
-					<ul th:each="res : ${dbList}">
-						<li th:text="${res.name}">名前</li>
-					</ul>
-					
-<!--					<tr th:each="res : ${dbList}">-->
-<!--							<td th:text="${res.id}">1</td>-->
-<!--							<td th:text="${res.name}">名前</td>-->
-<!--					</tr>-->
-
-		</section>
-		<section class="middle">
-
-			<form method="get" action="#" th:action="@{/middle}">
-									<input type="submit" value="中段へ">
-								</form>
-			<ul>
-				<li>アイス</li>
-				<li>枝豆</li>
-				<li>お肉</li>
-			</ul>
-
-		</section>
-		<section class="bottom">
-			<form method="get" action="#" th:action="@{/bottom}">
-									<input type="submit" value="下段へ">
-								</form>
-			<ul>
-				<li>キャベツ</li>
-				<li>トマト</li>
-				<li>にら</li>
-			</ul>
-
-
-		</section>
-
-
-	</main>
-	<footer>
-		<form method="get" action="#" th:action="@{/input}">
-			<input type="submit" value="入力画面へ">
-		</form>
-	</footer>
-
-</body>
+			<h1>アプリ名</h1>
+		</header>
+		<main>
+			<section class="top">
+	
+				<form method="get" action="#" th:action="@{/top}">
+					<input type="submit" value="上段へ">
+				</form>
+				<ul th:each="res : ${dbList}">
+					<li th:text="${res.name}">名前</li>
+				</ul>
+	
+				<!--					<tr th:each="res : ${dbList}">-->
+				<!--							<td th:text="${res.id}">1</td>-->
+				<!--							<td th:text="${res.name}">名前</td>-->
+				<!--					</tr>-->
+	
+			</section>
+			<section class="middle">
+	
+				<form method="get" action="#" th:action="@{/middle}">
+					<input type="submit" value="中段へ">
+				</form>
+	
+				<ul th:each="res : ${dbList2}">
+					<li th:text="${res.name}">名前</li>
+				</ul>
+			</section>
+			<section class="bottom">
+				<form method="get" action="#" th:action="@{/bottom}">
+					<input type="submit" value="下段へ">
+				</form>
+				<ul th:each="res : ${dbList3}">
+					<li th:text="${res.name}">名前</li>
+				</ul>
+			</section>
+		</main>
+		<footer>
+			<form method="get" action="#" th:action="@{/input}">
+				<input type="submit" value="入力画面へ">
+			</form>
+		</footer>
+	
+	</body>
 
 </html>
