@@ -3,26 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <script src="main.js" th:src="@{/main.js}"></script>
-    <link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+    <link rel="stylesheet" href="top.css" th:href="@{/top.css}">
 </head>
 <body>
     <h1 th:text="${title}"></h1>
     <section class="top">
-        <form method="get" action="#" th:action="@{/top}">
-            <input type="submit" value="上段へ">
-        </form>
+<!--        <form method="get" action="#" th:action="@{/top}">-->
+<!--            <input type="submit" value="上段へ">-->
+<!--        </form>-->
 
-        <ul th:each="res, stat : ${dbList}">
-            <li  class="changeC" th:text="${res.name}">名前</li>
-            <li th:text="${res.syoumikigen}">賞味期限</li>
+        <ul class="top-ul" th:each="res, stat : ${dbList}">
+            <li class="top-li"  th:text="${res.name}">名前</li>
+            <li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
             <li>
                 <form th:action="@{/del/{id}(id=${res.id})}">
-                    <input type="submit" value="削除" />
+                    <input class="delete-button" type="submit" value="削除" />
                 </form>
             </li>
-            <li>
-				
-            </li>
+      
         </ul>
     </section>
     <form method="get" action="#" th:action="@{/input}">
