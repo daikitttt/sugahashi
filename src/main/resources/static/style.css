@@ -1,20 +1,47 @@
-.block {
-  color: #fff;
-  text-align: center;
-  width: 1000px;
-  background: #000;
-  margin: 0 auto;
-  padding: 10px 20px;
-  box-sizing: border-box;
+/*.block {*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*  width: 1000px;*/
+/*  background: #000;*/
+/*  margin: 0 auto;*/
+/*  padding: 10px 20px;*/
+/*  box-sizing: border-box;*/
+/*}*/
+/*h1 {*/
+/* color: #fff;*/
+/*  text-align: center;*/
+/*  width: 100px;*/
+/*  background: #000;*/
+/*  margin: 0 auto;*/
+/*  padding: 10px 20px;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+:root {
+	--maincolor : #00afcc ;
 }
-h1 {
-	color: blue;
+body {
+	 width: 100%;
+    text-align: center;
 }
-@media (max-width: 768px) {
+.index h1 {
+	color: var(--maincolor);
+}
+
+#refrigerator {
+/*	 background-image: url('../../../../img/refrigerator.png');  画像のファイルパスを指定 */
+        background-size: cover; /* 画像を要素全体にカバーするようにサイズ調整 */
+        background-position: center; /* 画像を要素の中央に配置 */
+        background-repeat: no-repeat; /* 画像の繰り返しを無効にする */
+}
+
+@media (max-width: 850px) {
 /* スマホ専用のCSSを書く場所 */
 
-  .block {
+ .index  h1 {
     width: 100%;
+    font-size: 25px;
+    text-align: center;
   }
 
 }

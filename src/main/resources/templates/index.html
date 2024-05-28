@@ -2,17 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>アプリ</title>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>アプリ</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<header>
-			<h1>アプリ名</h1>
+	<header class="index">
+<!--		<p><a href="index.html"><img src="../../../../img/home.jpeg" alt="矢印"></a></p>-->
+			<h1>れいぞうこ</h1>
 		</header>
-		<main>
-			<section class="top">
+		
+		<main 			class="efrigerator">
+			<section class="top-img">
 	
 				<form method="get" action="#" th:action="@{/top}">
 					<input type="submit" value="上段へ">
@@ -46,6 +49,7 @@
 				</ul>
 			</section>
 		</main>
+		
 		<footer>
 			<form method="get" action="#" th:action="@{/input}">
 				<input type="submit" value="入力画面へ">
