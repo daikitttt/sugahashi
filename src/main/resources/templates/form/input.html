@@ -4,29 +4,41 @@
 <head>
 	<meta charset="utf-8" />
 	<script src="main.js" th:src="@{/main.js}"></script>
+	<title>アプリ</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
 </head>
 
 <body>
-	<h1 th:text="${title}"></h1>
-<!--	<form 	method="get"action="#"	th:action="@{/confirm}" th:object="${form}" >-->
-<!--		賞味期限：<input type="date" name="date">-->
-	    
-<!--	    </form>-->
-	<form method="get" action="#" th:action="@{/confirm}" th:object="${form}">
-		賞味期限：<input type="date" name="syoumkigen">
-		入れる物：<input type="text" name="name1">
-		<select name="place">
-			<option value="top">上段</option>
-		
-				<option value="middle">中段</option>
-			<option value="bottom">下段</option>
-		</select>
-		<input type="submit" value="登録する">
-	</form>
+	<h1>ついかフォーム</h1>
 	<form method="get" action="#" th:action="@{/index}">
-		<input type="submit" value="ホームへ">
-	</form>
+			<input type="submit" value="ホームへ">
+		</form>
+	<!--	<form 	method="get"action="#"	th:action="@{/confirm}" th:object="${form}" >-->
+	<!--		賞味期限：<input type="date" name="date">-->
+
+	<!--	    </form>-->
+	<div id="input-first">
+		<form method="get" action="#" th:action="@{/confirm}" th:object="${form}">
+			<ul>
+				<li>賞味期限：<input type="date" name="syoumkigen"></li>
+				<li>入れる物：<input type="text" name="name1">
+					<select name="place"id ="place">
+						<option value="top">冷ぞう庫</option>
+
+						<option value="middle">冷とう庫</option>
+						<option value="bottom">やさい室</option>
+					</select>
+				</li>
+			</ul>
+			<div id="input-button" class="input-form">
+			<input type="submit" value="登録する">
+			</div>
+		</form>
+	</div>
 
 </body>
 

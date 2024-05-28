@@ -4,11 +4,17 @@
 <head>
 	<title>Hello</title>
 	<meta charset="utf-8" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
 </head>
 
 <body>
-	<h1><span th:text="${title}"></span></h1>
+	<h1>かくにん</h1>
 	<div th:object="${form}">
+		<div id="input-first">
 		<table>
 			<tr>
 				<th>賞味期限：</th>
@@ -23,6 +29,7 @@
 				<td th:text="*{place}"></td>
 			</tr>
 		</table>
+		</div>
 		<form method="get" action="#" th:action="@{/input}">
 			<input type="hidden" name="name1" th:value="*{name1}">
 			<input type="hidden" name="place" th:value="*{place}">
@@ -30,10 +37,12 @@
 			<input type="submit" value="入力画面へ">
 		</form>
 		<form method="get" action="#" th:action="@{/complete}">
+		<div id="input-button" class="input-form">
 			<input type="hidden" name="name1" th:value="*{name1}">
 			<input type="hidden" name="place" th:value="*{place}">
 			<input type="hidden" name="syoumkigen" th:value="*{syoumkigen}">
 			<input type="submit" value="完了画面へ">
+			</div>
 		</form>
 	</div>
 </body>

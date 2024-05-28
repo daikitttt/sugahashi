@@ -4,15 +4,20 @@
 <head>
 	<title>Hello</title>
 	<meta charset="utf-8" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
 </head>
 
 <body>
-	<h1>完了ページ</h1>
-	<p>DB登録が完了しました！</p>
+	<h1>かんりょうページ</h1>
+	<p>登録が完了しました！</p>
 	<form method="get" action="#" th:action="@{/index}">
 			<input type="submit" value="ホームへ">
 		</form>
-	<a href="http://localhost:8080/h2-console" target="_blank">H2コンソール(別タブで開く)</a>
+<!--	<a href="http://localhost:8080/h2-console" target="_blank">H2コンソール(別タブで開く)</a>-->
 </body>
 
 </html>
