@@ -33,7 +33,7 @@ public class EntForm {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public String getSyoumkigen() {
+	public String getSyoumikigen() {
 		return syoumkigen;
 	}
 

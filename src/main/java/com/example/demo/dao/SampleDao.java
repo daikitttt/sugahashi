@@ -24,7 +24,7 @@ public class SampleDao {
 	}
 	public void insertDb(EntForm entform) {
 
-		db.update("INSERT INTO sample (name,place,syoumikigen) VALUES(?,?,?)", entform.getName(),entform.getPlace(),entform.getSyoumkigen());
+		db.update("INSERT INTO sample (name,place,syoumikigen) VALUES(?,?,?)", entform.getName(),entform.getPlace(),entform.getSyoumikigen());
 		
 	}//public List<EntForm> searchDb(){
 //
