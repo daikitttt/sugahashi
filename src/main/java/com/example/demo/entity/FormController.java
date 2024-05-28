@@ -1,4 +1,4 @@
-package com.example.demo.form;
+package com.example.demo.entity;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.dao.SampleDao;
-import com.example.demo.entity.EntForm;
+import com.example.demo.form.Form;
 
 
 @Controller
