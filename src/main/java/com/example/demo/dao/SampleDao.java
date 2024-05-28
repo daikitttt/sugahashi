@@ -1,6 +1,8 @@
 package com.example.demo.dao;
 
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -57,7 +59,19 @@ public class SampleDao {
 			//id、nameのデータをentformdbに移す
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
-			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+			entformdb.setPlace((String)result1.get("place"));
+//			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+			
+			Date syoumkigenDate = (Date) result1.get("syoumikigen");
+	        if (syoumkigenDate != null) {
+	            // SimpleDateFormatを使ってDateをStringに変換
+	            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	            String syoumkigenString = dateFormat.format(syoumkigenDate);
+	            entformdb.setSyoumkigen(syoumkigenString);
+	        } else {
+	            entformdb.setSyoumkigen(null);
+	        }
+			
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -84,7 +98,18 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+//			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+			
+			Date syoumkigenDate = (Date) result1.get("syoumikigen");
+	        if (syoumkigenDate != null) {
+	            // SimpleDateFormatを使ってDateをStringに変換
+	            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	            String syoumkigenString = dateFormat.format(syoumkigenDate);
+	            entformdb.setSyoumkigen(syoumkigenString);
+	        } else {
+	            entformdb.setSyoumkigen(null);
+	        }
+			
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -113,7 +138,18 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+//			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+			
+			Date syoumkigenDate = (Date) result1.get("syoumikigen");
+	        if (syoumkigenDate != null) {
+	            // SimpleDateFormatを使ってDateをStringに変換
+	            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	            String syoumkigenString = dateFormat.format(syoumkigenDate);
+	            entformdb.setSyoumkigen(syoumkigenString);
+	        } else {
+	            entformdb.setSyoumkigen(null);
+	        }
+			
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
@@ -142,7 +178,18 @@ public class SampleDao {
 			entformdb.setId((int)result1.get("id"));
 			entformdb.setName((String)result1.get("name"));
 			entformdb.setPlace((String)result1.get("place"));
-			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+//			entformdb.setSyoumkigen((String)result1.get("syoumikigen"));
+			
+			Date syoumkigenDate = (Date) result1.get("syoumikigen");
+	        if (syoumkigenDate != null) {
+	            // SimpleDateFormatを使ってDateをStringに変換
+	            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	            String syoumkigenString = dateFormat.format(syoumkigenDate);
+	            entformdb.setSyoumkigen(syoumkigenString);
+	        } else {
+	            entformdb.setSyoumkigen(null);
+	        }
+			
 			//移し替えたデータを持ったentformdbを、resultDB2に入れる
 			resultDb2.add(entformdb);
 		}
