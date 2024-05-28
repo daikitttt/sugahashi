@@ -3,59 +3,74 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!--	<meta name="viewport" content="width=device-width,initial-scale=1">-->
 	<title>アプリ</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-	<header class="index">
-<!--		<p><a href="index.html"><img src="../../../../img/home.jpeg" alt="矢印"></a></p>-->
-			<h1>れいぞうこ</h1>
-		</header>
-		
-		<main 			class="efrigerator">
-			<section class="top-img">
-	
-				<form method="get" action="#" th:action="@{/top}">
-					<input type="submit" value="上段へ">
-				</form>
+<body class="index">
+
+	<header>
+<!--		<ul>-->
+<!--			<li><a href="#">もどる</a></li>-->
+<!--			<li><h1>れいぞうこ</h1></li>-->
+<!--		</ul>-->
+				<p><a href="index.html"><img src="../../../../img/home.jpeg" alt="矢印"></a></p>
+		<h1>れいぞうこ</h1>
+	</header>
+
+	<main>
+		<div id="refrigerator">
+			<section class="top">
+				<div class="room-button">
+					<form method="get" action="#" th:action="@{/top}">
+						<input type="submit" value="冷蔵庫">
+					</form>
+				</div>
 				<ul th:each="res : ${dbList}">
 					<li th:text="${res.name}">名前</li>
 				</ul>
-	
+
 				<!--					<tr th:each="res : ${dbList}">-->
 				<!--							<td th:text="${res.id}">1</td>-->
 				<!--							<td th:text="${res.name}">名前</td>-->
 				<!--					</tr>-->
-	
+
 			</section>
 			<section class="middle">
-	
-				<form method="get" action="#" th:action="@{/middle}">
-					<input type="submit" value="中段へ">
-				</form>
-	
+				<div class="room-button">
+					<form method="get" action="#" th:action="@{/middle}">
+						<input type="submit" value="冷凍庫">
+					</form>
+				</div>
 				<ul th:each="res : ${dbList2}">
 					<li th:text="${res.name}">名前</li>
 				</ul>
 			</section>
 			<section class="bottom">
-				<form method="get" action="#" th:action="@{/bottom}">
-					<input type="submit" value="下段へ">
-				</form>
-				<ul th:each="res : ${dbList3}">
-					<li th:text="${res.name}">名前</li>
-				</ul>
+				<div class="room-button">
+					<form method="get" action="#" th:action="@{/bottom}">
+						<input type="submit" value="やさい室">
+					</form>
+					<ul th:each="res : ${dbList3}">
+						<li th:text="${res.name}">名前</li>
+					</ul>
+				</div>
 			</section>
-		</main>
-		
-		<footer>
-			<form method="get" action="#" th:action="@{/input}">
-				<input type="submit" value="入力画面へ">
-			</form>
-		</footer>
-	
-	</body>
+		</div>
+	</main>
+
+	<footer>
+		<div id="input-button" class="input-first">
+		<form method="get" action="#" th:action="@{/input}">
+			<input type="submit" value="+">
+		</form>
+		</div>
+	</footer>
+
+</body>
 
 </html>
