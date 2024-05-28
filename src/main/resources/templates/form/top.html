@@ -23,6 +23,11 @@
 					<input type="submit" value="削除" />
 				</form>
 			</li>
+			<li>
+				<script src="/src/main/resources/static/main.js">
+				<button id="changeColor" onclick="clickCC()">-</button>
+				</script>
+			</li>
 		</ul>
 	</section>
 	<form method="get" action="#" th:action="@{/input}">
@@ -31,7 +36,7 @@
 	<form method="get" action="#" th:action="@{/index}">
 		<input type="submit" value="ホームへ">
 	</form>
-
+		
 </body>
 
 </html>
