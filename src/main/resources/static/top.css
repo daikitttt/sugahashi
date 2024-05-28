@@ -1,0 +1,235 @@
+:root {
+	--maincolor: #00afcc;
+}
+
+
+
+body {
+	width: 100%;
+	text-align: center;
+	color: var(--maincolor);
+}
+
+h1 {
+	color: var(--maincolor);
+	/*---------------フォント-----------*/
+	font-family: "Darumadrop One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+main {
+	height: 100%;
+	background-image: url('../../../../img/refrigerator.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/*---------------ヘッド-----------*/
+
+heder ul {
+	width: 80%;
+	list-style-type: none;
+	/*箇条書きのポッチを消す*/
+	text-align: center
+		/*左右中央寄せは親要素に対して指定*/
+}
+
+header ul li {
+	display: inline-block;
+	/*inline-blockにします*/
+	padding: 10px 0;
+	/*余白も指定できる*/
+	margin: 10px 0;
+	/*余白も指定できる*/
+}
+
+header ul li:first-child {
+    float: left; /* 左寄せ */
+    margin: 30px;
+}
+
+/* 二つ目の li 要素 */
+header ul li:nth-child(2) {
+    display: inline-block; /* インラインブロックにする */
+    margin: 0 auto; /* 左右のマージンを自動で調整して真ん中に配置 */
+    float: none; /* float を解除 */
+}
+
+/*---------------ボタン-----------*/
+
+#input-button input[type="submit"] {
+	color: black;
+	/* ボタンのテキスト色 */
+	padding: 0.2rem 1rem;
+	/* ボタンの内側の余白 */
+
+	border-radius: 100vh;
+	/* ボタンの角を丸くする */
+	cursor: pointer;
+	/* ボタンのカーソルスタイル */
+	font-weight: bold;
+	border: 2px solid black
+}
+
+
+#input-button input[type="submit"]:hover {
+	color: white;
+	/* ボタンのテキスト色 */
+	padding: 0.2rem 1rem;
+	/* ボタンの内側の余白 */
+
+	border-radius: 100vh;
+	/* ボタンの角を丸くする */
+	cursor: pointer;
+	/* ボタンのカーソルスタイル */
+	font-weight: bold;
+	background-color: black;
+	border: 2px solid white;
+
+}
+
+.input-first input[type="submit"]{
+	font-size: 40px;
+}
+ .input-first input[type="submit"]:hover{
+	font-size: 40px;
+}
+
+.input-form input[type="submit"]{
+	font-size: 20px;
+}
+.input-orm input[type="submit"]:hover{
+	font-size: 20px;
+}
+
+.room-button input[type="submit"]{
+
+	color: var(--maincolor);
+	/* ボタンのテキスト色 */
+	padding: 0.5rem 2rem;
+	/* ボタンの内側の余白 */
+
+	border-radius: 100vh;
+	/* ボタンの角を丸くする */
+	cursor: pointer;
+	/* ボタンのカーソルスタイル */
+	font-weight: bold;
+	font-size: large;
+	border: 2px solid var(--maincolor);
+
+}
+
+.room-button input[type="submit"]:hover{
+
+	color: white;
+	/* ボタンのテキスト色 */
+	padding: 0.5rem 2rem;
+	/* ボタンの内側の余白 */
+
+	border-radius: 100vh;
+	/* ボタンの角を丸くする */
+	cursor: pointer;
+	/* ボタンのカーソルスタイル */
+	font-weight: bold;
+	font-size: large;
+	background-color: var(--maincolor);
+	border: 2px solid white;
+
+}
+
+
+/*---------------冷蔵庫、冷凍庫などわける---------------*/
+
+#refrigerator ul {
+	list-style-type: none;
+	/*箇条書きのポッチを消す*/
+	text-align: center;
+}
+
+/*-----------------top.html用--------------------------*/
+ul.top-ul{
+	list-style-type: none;/*点を消す*/
+	margin-right: 13px;
+	display: inline-block;
+    border: 1px solid black; /* 黒色のボーダー */
+    border-radius: 5px; /* 角を丸める */
+    padding: 5px 10px; /* 内側の余白 */    
+    margin-bottom: 10px; /* 下側のマージン */
+    font-size: 23px;
+}
+
+li.syoumikigen {
+	color:#000;
+	font-size: 13px;
+	font-weight: lighter;
+}
+input.delete-button {
+	background-color: #adadad;
+	border-radius: 10px;
+}
+input.delete-button[type="submit"]:hover {
+    background-color: #7d7d7d; /* ホバー時の背景色 */
+}
+
+/*---------------------------------------------------------------------*/
+
+.top,
+.middle,
+.bottom {
+	display: inline-block;
+	/*inline-blockにします*/
+	width: 80%;
+	/*幅も指定できる*/
+	padding: 10px 0;
+	/*余白も指定できる*/
+	margin: 10px 0;
+	/*余白も指定できる*/
+	vertical-align: middle;
+	/*縦の表示位置も指定できる*/
+	font-weight: bold;
+	/*文字を太字に*/
+	border: 2px solid #000;
+	/* 枠の設定 */
+	border-radius: 5px;
+	/* 角を丸める */
+}
+/*---------------input.html---------------*/
+/*---------------中身追加画面大枠---------------*/
+
+#input-first ul,#input-first table{
+	list-style-type: none;
+	/*箇条書きのポッチを消す*/
+	text-align: center;
+	border: 2px solid #000;
+	/* 枠の設定 */
+	border-radius: 5px;
+	/* 角を丸める */
+	width: 80%;
+	/*幅も指定できる*/
+	padding: 10% 0;
+	/*余白も指定できる*/
+	margin: 50px 10%;
+	/*余白も指定できる*/
+}
+
+#input-first ul li ,#input-first table tr{
+	display: inline-block;
+	/*inline-blockにします*/
+	width: 80%;
+	/*幅も指定できる*/
+	padding: 10px 0;
+	/*余白も指定できる*/
+	margin: 10px 0;
+	/*余白も指定できる*/
+	vertical-align: middle;
+	/*縦の表示位置も指定できる*/
+	font-weight: bold;
+	/*文字を太字に*/
+	
+}
+
+
+
+

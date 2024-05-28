@@ -59,7 +59,7 @@ public class FormController {
 	public String top(Model model, Form form) {
 		List<EntForm> list = sampledao.searchDb();
 		model.addAttribute("dbList",list);
-		model.addAttribute("title", "上段"); 
+		model.addAttribute("title", "冷蔵庫"); 
 		return "form/top";
 	}
 
