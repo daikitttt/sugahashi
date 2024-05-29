@@ -80,7 +80,7 @@ public class SampleDao {
 	
 	public List<EntForm> searchDb(){
 
-		String sql = "SELECT * FROM sample where place='top'";
+		String sql = "SELECT * FROM sample where place='冷蔵庫'";
 
 		//データベースから取り出したデータをresultDB1に入れる
 		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
@@ -120,7 +120,7 @@ public class SampleDao {
 	
 	public List<EntForm> searchDb2(){
 
-		String sql = "SELECT * FROM sample where place='middle'";
+		String sql = "SELECT * FROM sample where place='冷凍庫'";
 
 		//データベースから取り出したデータをresultDB1に入れる
 		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
@@ -160,7 +160,7 @@ public class SampleDao {
 	
 	public List<EntForm> searchDb3(){
 
-		String sql = "SELECT * FROM sample where place='bottom'";
+		String sql = "SELECT * FROM sample where place='やさい室'";
 
 		//データベースから取り出したデータをresultDB1に入れる
 		List<Map<String, Object>> resultDb1 = db.queryForList(sql);
