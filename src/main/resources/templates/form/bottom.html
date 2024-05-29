@@ -3,12 +3,16 @@
 
 <head>
 	<meta charset="utf-8" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+			rel="stylesheet">
 	<script src="main.js" th:src="@{/main.js}"></script>
 	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
 </head>
 
 <body>
-	<h1 th:text="${title}"></h1>
+	<h1>やさいしつ</h1>
 	<section class="bottom">
 		<form method="get" action="#" th:action="@{/bottom}">
 			<input type="submit" value="下段へ">
