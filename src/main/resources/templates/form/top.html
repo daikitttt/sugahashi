@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="utf-8" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
-			rel="stylesheet">
-    <script src="main.js" th:src="@{/main.js}"></script>
-    <link rel="stylesheet" href="top.css" th:href="@{/top.css}">
-</head>
-<body>
-    <h1>れいぞうこ</h1>
-    <section class="top">
-<!--        <form method="get" action="#" th:action="@{/top}">-->
-<!--            <input type="submit" value="上段へ">-->
-<!--        </form>-->
 
-        <ul class="top-ul" th:each="res, stat : ${dbList}">
-            <li class="top-li"  th:text="${res.name}">名前</li>
-            <li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
-            <li>
-                <form th:action="@{/del/{id}(id=${res.id})}">
-                    <input class="delete-button" type="submit" value="削除" />
-                </form>
-            </li>
-      
-        </ul>
-    </section>
-    <form method="get" action="#" th:action="@{/input}">
-        <input type="submit" value="入力画面へ">
-    </form>
-    <form method="get" action="#" th:action="@{/index}">
-        <input type="submit" value="ホームへ">
-    </form>
+<head>
+	<meta charset="utf-8" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
+	<script src="main.js" th:src="@{/main.js}"></script>
+	<link rel="stylesheet" href="top.css" th:href="@{/top.css}">
+</head>
+
+<body>
+	<h1>れいぞうこ</h1>
+	<section class="top">
+		<ul class="top-ul" th:each="res, stat : ${dbList}">
+			<li class="top-li" th:text="${res.name}">名前</li>
+			<li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
+			<li>
+				<form th:action="@{/del/{id}(id=${res.id})}">
+					<input class="delete-button" type="submit" value="削除" />
+				</form>
+			</li>
+
+		</ul>
+	</section>
+	<div id="footer" class="complete-footer">
+		<ul>
+			<li>
+
+				<form method="get" action="#" th:action="@{/index}">
+					<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">
+				</form>
+
+			</li>
+			<li>
+
+				<div id="input-button" class="input-first">
+					<form method="get" action="#" th:action="@{/input}">
+						<input type="submit" value="+">
+					</form>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--    <form method="get" action="#" th:action="@{/input}">-->
+	<!--        <input type="submit" value="入力画面へ">-->
+	<!--    </form>-->
+	<!--    <form method="get" action="#" th:action="@{/index}">-->
+	<!--        <input type="submit" value="ホームへ">-->
+	<!--    </form>-->
 </body>
+
 </html>
