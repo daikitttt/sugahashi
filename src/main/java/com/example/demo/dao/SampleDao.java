@@ -40,6 +40,9 @@ public class SampleDao {
 //		
 //	}
 //	
+	
+	
+	
 	public List<EntForm> searchDb4(){
 
 		String sql = "SELECT * FROM sample";
@@ -240,5 +243,30 @@ public class SampleDao {
 			db.update("UPDATE sample SET name = ? WHERE id = ?",entform.getName(), id);
 		}
 	
-	
+		 public List<EntForm> findByName(String name) {
+		        String sql = "SELECT * FROM sample WHERE name LIKE ?";
+		        String searchPattern = "%" + name + "%";
+
+		        List<Map<String, Object>> resultDb1 = db.queryForList(sql, searchPattern);
+		        List<EntForm> resultDb2 = new ArrayList<>();
+
+		        for (Map<String, Object> result1 : resultDb1) {
+		            EntForm entformdb = new EntForm();
+		            entformdb.setId((int) result1.get("id"));
+		            entformdb.setName((String) result1.get("name"));
+		            entformdb.setPlace((String) result1.get("place"));
+		            
+		            Date syoumkigenDate = (Date) result1.get("syoumikigen");
+		            if (syoumkigenDate != null) {
+		                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		                String syoumkigenString = dateFormat.format(syoumkigenDate);
+		                entformdb.setSyoumkigen(syoumkigenString);
+		            } else {
+		                entformdb.setSyoumkigen(null);
+		            }
+
+		            resultDb2.add(entformdb);
+		        }
+		        return resultDb2;
+		    }
 }
