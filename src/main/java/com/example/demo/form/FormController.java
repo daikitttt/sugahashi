@@ -57,6 +57,24 @@ public class FormController {
 		model.addAttribute("message", "Hello World2"); 
 		return "form/confirm";
 	}
+	//各削除確認ページ
+	@RequestMapping("/confirm_top")
+	public String confirm_top(Model model, Form form) {
+		model.addAttribute("message", "Hello World2"); 
+		return "form/confirm_top";
+	}
+	
+	@RequestMapping("/confirm_middle")
+	public String confirm_middle(Model model, Form form){
+		return "form/confirm_middle";
+	}
+	
+	@RequestMapping("/confirm_bottom")
+	public String confirm_bottom(Model model, Form form) {
+		model.addAttribute("message", "Hello World2"); 
+		return "form/confirm_bottom";
+	}
+	
 	@RequestMapping("/top")
 	public String top(Model model, Form form) {
 		List<EntForm> list = sampledao.searchDb();
@@ -120,10 +138,20 @@ public class FormController {
 		return "form/search";
 	}
 	
-	@RequestMapping("/del/{id}")
+	@RequestMapping("/topdel/{id}")
 	public String destory(@PathVariable Long id) {
 		sampledao.deleteDb(id);
-		return "redirect:/index";
+		return "redirect:/confirm_top";
+	}
+	@RequestMapping("/middledel/{id}")
+	public String destory2(@PathVariable Long id) {
+		sampledao.deleteDb(id);
+		return "redirect:/confirm_middle";
+	}
+	@RequestMapping("/bottomdel/{id}")
+	public String destory3(@PathVariable Long id) {
+		sampledao.deleteDb(id);
+		return "redirect:/confirm_bottom";
 	}
 	
 	////////////////////////////

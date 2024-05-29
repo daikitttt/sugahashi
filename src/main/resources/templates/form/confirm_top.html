@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Hello</title>
+	<meta charset="utf-8" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+</head>
+
+<body>
+	<h1>かくにん</h1>
+	<form method="get" action="#" th:action="@{/top_del}">
+		<input type="submit" value="続けて削除">
+	</form>
+	<form method="get" action="#" th:action="@{/index}">
+		<input type="submit" value="ホームに戻る">
+	</form>	
+	
+</body>
+
+</html>
