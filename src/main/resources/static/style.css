@@ -62,7 +62,7 @@ header ul li:nth-child(2) {
 /*---------------ボタン-----------*/
 
 #input-button input[type="submit"],
-#input-button input[type="image"]  {
+#input-button input[type="image"] {
 	color: black;
 	/* ボタンのテキスト色 */
 
@@ -79,7 +79,7 @@ header ul li:nth-child(2) {
 }
 
 #input-button input[type="image"] {
-	padding:  0.7rem 1.2rem;
+	padding: 0.7rem 1.2rem;
 }
 
 #input-button input[type="submit"]:hover {
@@ -108,7 +108,7 @@ header ul li:nth-child(2) {
 	/* ボタンの角を丸くする */
 	cursor: pointer;
 	/* ボタンのカーソルスタイル */
-/*	font-weight: bold;*/
+	/*	font-weight: bold;*/
 	border: 1px solid black;
 	font-size: medium;
 }
@@ -124,7 +124,7 @@ header ul li:nth-child(2) {
 	/* ボタンの角を丸くする */
 	cursor: pointer;
 	/* ボタンのカーソルスタイル */
-/*	font-weight: bold;*/
+	/*	font-weight: bold;*/
 	background-color: black;
 	border: 1px solid white;
 
@@ -183,21 +183,51 @@ header ul li:nth-child(2) {
 }
 
 .room-button {
-	 display: inline-block;
-	 width: 100%;
+	display: inline-block;
+	width: 100%;
 }
+
 .room-button-1 {
-            margin-top: 60px ; 
-        }
+	margin-top: 60px;
+}
 
-        .room-button-2 {
-            margin-top: -10px ; 
-        }
+.room-button-2 {
+	margin-top: -10px;
+}
 
-        .room-button-3 {
-            margin-top: -70px ; 
-        }
+.room-button-3 {
+	margin-top: -70px;
+}
 
+.room-comp-button-1 {
+	margin-top: 45px;
+}
+.room-comp-button-2 {
+	margin-top: -30px;
+}
+
+.room-comp-button-3 {
+	margin-top: -90px;
+}
+
+/*---------------ボタン固定---------------*/
+
+.stop-button {
+	position: fixed;
+	bottom: 10%;
+	/* 画面の下からの距離 */
+	right: 10%;
+	/* 画面の右からの距離 */
+	z-index: 1000;
+	/* 他の要素の上に表示 */
+}
+
+.small-image-button {
+	width: 50px;
+	/* 画像の幅を50ピクセルに設定 */
+	height: 50px;
+	/* 画像の高さを50ピクセルに設定 */
+}
 
 /*---------------冷蔵庫、冷凍庫などわける---------------*/
 
@@ -230,12 +260,13 @@ header ul li:nth-child(2) {
 
 
 
-.refrigerator{
+.refrigerator {
 	height: 400px;
-    background-image: url('/img/reizou.jpg'); /*背景画像を設定*/
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+	background-image: url('/img/reizou.jpg');
+	/*背景画像を設定*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 
@@ -326,6 +357,21 @@ header ul li:nth-child(2) {
 /*---------------completeフッター---------------*/
 
 .small-image-button {
-            width: auto; /* 画像の幅を50ピクセルに設定 */
-            height: 30px; /* 画像の高さを50ピクセルに設定 */
-        }
+	width: auto;
+	/* 画像の幅を50ピクセルに設定 */
+	height: 30px;
+	/* 画像の高さを50ピクセルに設定 */
+}
+
+.complete-p {
+	margin: 2.5rem 0;
+}
+
+.refrigerator-complete {
+	height: 350px;
+	background-image: url('/img/reizou.jpg');
+	/*背景画像を設定*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

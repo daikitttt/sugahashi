@@ -13,7 +13,7 @@
 
 <body>
 	<h1>かんりょうページ</h1>
-	<p>登録が完了しました！</p>
+	<p class="complete-p">登録が完了しました！</p>
 	<div id="input-button" class="input-first">
 		<form method="get" action="#" th:action="@{/input}">
 			<input type="submit" value="+">
@@ -21,42 +21,37 @@
 	</div>
 
 	<main>
-		<div class="refrigerator">
+		<div class="refrigerator-complete">
 			<p></p>
-			<div class="room-button room-button-1">
+			<div class="room-button room-comp-button-1">
 
 				<form method="get" action="#" th:action="@{/top}">
 					<input type="submit" value="冷蔵庫">
 				</form>
 
 			</div>
-			<div class="room-button room-button-2">
+			<div class="room-button room-comp-button-2">
 
 				<form method="get" action="#" th:action="@{/middle}">
 					<input type="submit" value="冷凍庫">
 				</form>
 
 			</div>
-			<div class="room-button room-button-3">
+			<div class="room-button room-comp-button-3">
 
 				<form method="get" action="#" th:action="@{/bottom}">
 					<input type="submit" value="やさい室">
 				</form>
 
 			</div>
+			<div class="stop-button">
+				<form method="get" action="#" th:action="@{/index}">
+					<input type="image" src="../img/home-black.jpeg" alt="矢印" class="small-image-button">
+				</form>
+			</div>
 		</div>
-<!--		<div id="input-button" class="input-first">-->
-<!--			<form method="get" action="#" th:action="@{/input}">-->
-<!--				<input type="submit" value="+">-->
-<!--			</form>-->
-<!--		</div>-->
-
 
 	</main>
-	<!--	<form method="get" action="#" th:action="@{/index}">-->
-	<!--		<input type="submit" value="ホームへ">-->
-	<!--	</form>-->
-	<!--	<a href="http://localhost:8080/h2-console" target="_blank">H2コンソール(別タブで開く)</a>-->
 </body>
 
 </html>
