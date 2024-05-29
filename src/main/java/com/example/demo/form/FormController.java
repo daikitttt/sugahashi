@@ -64,6 +64,14 @@ public class FormController {
 		model.addAttribute("title", "冷蔵庫"); 
 		return "form/top";
 	}
+	
+	@RequestMapping("/top_del")
+	public String top_del(Model model, Form form) {
+		List<EntForm> list = sampledao.searchDb();
+		model.addAttribute("dbList",list);
+		model.addAttribute("title", "冷蔵庫"); 
+		return "form/top_del";
+	}
 
 	@RequestMapping("/middle")
 	public String middle(Model model, Form form) {
@@ -72,6 +80,15 @@ public class FormController {
 		model.addAttribute("dbList2",list2);
 		return "form/middle";
 	}
+	
+	@RequestMapping("/middle_del")
+	public String middle_del(Model model, Form form) {
+		model.addAttribute("title", "中段"); 
+		List<EntForm> list2 = sampledao.searchDb2();
+		model.addAttribute("dbList2",list2);
+		return "form/middle_del";
+	}
+	
 
 	@RequestMapping("/bottom")
 	public String bottom(Model model, Form form) {
@@ -81,6 +98,16 @@ public class FormController {
 		List<EntForm> list4 = sampledao.searchDb4();
 		model.addAttribute("dbList4",list4);
 		return "form/bottom";
+	}
+	
+	@RequestMapping("/bottom_del")
+	public String bottom_del(Model model, Form form) {
+		model.addAttribute("title", "下段"); 
+		List<EntForm> list3 = sampledao.searchDb3();
+		model.addAttribute("dbList3",list3);
+		List<EntForm> list4 = sampledao.searchDb4();
+		model.addAttribute("dbList4",list4);
+		return "form/bottom_del";
 	}
 	
 	@RequestMapping("/search")
