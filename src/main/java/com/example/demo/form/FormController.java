@@ -128,6 +128,8 @@ public class FormController {
 		return "form/bottom_del";
 	}
 	
+	
+	
 	@RequestMapping("/search")
 	public String search(Model model, Form form) {
 		model.addAttribute("title", "下段"); 
@@ -156,6 +158,12 @@ public class FormController {
 	
 	////////////////////////////
 	
+	@RequestMapping("/edit/{id}")
+	public String edit(@PathVariable Long id, Model model) {
+		List<EntForm> list1 = sampledao.selectOne(id);
+		return "redirect:/index";
+	}
+	
 	// 検索結果を表示するためのメソッド
     @PostMapping("/search")
     public String search(@RequestParam("find") String find, Model model) {
@@ -164,4 +172,16 @@ public class FormController {
         model.addAttribute("data", list);
         return "form/search";
     }
+    
+    @RequestMapping("/edit/{id}")
+	public String editExe(@PathVariable Long id, Model model, Form form) {
+		//フォームの値をエンティティに入れ直し
+		EntForm entform = new EntForm();
+		//取得できているかの確認
+		entform.setName(form.getName1());
+		//更新の実行
+		sampledao.updateDb(id,entform);
+		//一覧画面へリダイレクト
+		return "redirect:/index";
+	}
 }

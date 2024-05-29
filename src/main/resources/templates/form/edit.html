@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<script src="main.js" th:src="@{/main.js}"></script>
+	<title>アプリ</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+</head>
+
+<body>
+	<h1>へんしゅうフォーム</h1>
+	<!--	<form method="get" action="#" th:action="@{/index}">-->
+	<!--			<input type="submit" value="ホームへ">-->
+	<!--		</form>-->
+	<!--	<form 	method="get"action="#"	th:action="@{/confirm}" th:object="${form}" >-->
+	<!--		賞味期限：<input type="date" name="date">-->
+
+	<!--	    </form>-->
+	<div id="input-first">
+		<form method="get" action="#" th:action="@{/edit/{id}(id=${res.id})}" th:object="${form}">
+			<ul>
+				<li>賞味期限：<input type="date" name="syoumkigen" th:value="${syoumikigen}"></li>
+				<li>入れる物：<input type="text" name="name" th:value="${name}">
+					<select name="place" id="place" >
+						<option value="冷蔵庫">冷ぞう庫</option>
+
+						<option value="冷凍庫">冷とう庫</option>
+						<option value="やさい室">やさい室</option>
+					</select>
+				</li>
+			</ul>
+			<div id="input-button" class="input-form">
+				<input type="submit" value="更新する">
+			</div>
+		</form>
+	</div>
+<!--	<footer>-->
+<!--		<div id="footer">-->
+<!--			<ul>-->
+<!--				<li>-->
+<!--					<form method="get" action="#" th:action="@{/index}">-->
+<!--						<input type="image" src="../img/yajirushi.jpeg">-->
+<!--					</form>-->
+<!--				</li>-->
+<!--				<li><a href="../index.html"><img src="../img/yajirushi.jpeg" alt="矢印"></a></li>-->
+<!--				<li><a href="../index.html"><img src="../img/home.jpeg" alt="矢印"></a></li>-->
+				
+<!--			</ul>-->
+<!--		</div>-->
+<!--	</footer>-->
+
+</body>
+
+</html>

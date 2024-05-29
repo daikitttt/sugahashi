@@ -240,7 +240,7 @@ public class SampleDao {
 			//コンソールに表示
 			System.out.println("編集の実行");
 			//UPDATEを実行
-			db.update("UPDATE sample SET name = ? WHERE id = ?",entform.getName(), id);
+			db.update("UPDATE sample SET name = ?, syoumikigen = ?, place = ?, WHERE id = ?",entform.getName(),entform.getSyoumikigen(),entform.getPlace(), id);
 		}
 	
 		 public List<EntForm> findByName(String name) {
