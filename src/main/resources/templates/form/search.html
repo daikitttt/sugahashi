@@ -19,7 +19,7 @@
         </div>
       </form>
     </div>
-	<p th:text="${searchtitle}">検索ページ</p>
+	<p class="searchtitle" th:text="${searchtitle}">検索ページ</p>
 	<div class="search-block">
 	<ul class="top-ul" th:each="item:${data}">
 	          <li class="top-li"  th:text="*{item.name}">名前</li>
