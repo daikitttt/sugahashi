@@ -158,11 +158,11 @@ public class FormController {
 	
 	////////////////////////////
 	
-	@RequestMapping("/edit/{id}")
-	public String edit(@PathVariable Long id, Model model) {
-		List<EntForm> list1 = sampledao.selectOne(id);
-		return "redirect:/index";
-	}
+//	@RequestMapping("/edit/{id}")
+//	public String edit(@PathVariable Long id, Model model) {
+//		List<EntForm> list1 = sampledao.selectOne(id);
+//		return "redirect:/index";
+//	}
 	
 	// 検索結果を表示するためのメソッド
     @PostMapping("/search")
