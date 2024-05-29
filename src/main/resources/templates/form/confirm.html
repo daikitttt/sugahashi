@@ -15,35 +15,62 @@
 	<h1>かくにん</h1>
 	<div th:object="${form}">
 		<div id="input-first">
-		<table>
-			<tr>
-				<th>賞味期限：</th>
-				<td th:text="*{syoumkigen}"></td>
-			</tr>
-			<tr>
-				<th>入れる物：</th>
-				<td th:text="*{name1}"></td>
-			</tr>
-			<tr>
-				<th>場所：</th>
-				<td th:text="*{place}"></td>
-			</tr>
-		</table>
+			<table>
+				<tr>
+					<th>賞味期限：</th>
+					<td th:text="*{syoumkigen}"></td>
+				</tr>
+				<tr>
+					<th>入れる物：</th>
+					<td th:text="*{name1}"></td>
+				</tr>
+				<tr>
+					<th>場所：</th>
+					<td th:text="*{place}"></td>
+				</tr>
+			</table>
 		</div>
-		<form method="get" action="#" th:action="@{/input}">
-			<input type="hidden" name="name1" th:value="*{name1}">
-			<input type="hidden" name="place" th:value="*{place}">
-			<input type="hidden" name="syoumkigen" th:value="*{syoumkigen}">
-			<input type="submit" value="入力画面へ">
-		</form>
-		<form method="get" action="#" th:action="@{/complete}">
-		<div id="input-button" class="input-form">
-			<input type="hidden" name="name1" th:value="*{name1}">
-			<input type="hidden" name="place" th:value="*{place}">
-			<input type="hidden" name="syoumkigen" th:value="*{syoumkigen}">
-			<input type="submit" value="完了画面へ">
-			</div>
-		</form>
+		<div id="footer" class="footer-confirm">
+			<ul>
+				<li>
+					<form method="get" action="#" th:action="@{/input}">
+						<div id="back-button" class="input-form">
+							<input type="hidden" name="name1" th:value="*{name1}">
+							<input type="hidden" name="place" th:value="*{place}">
+							<input type="hidden" name="syoumkigen" th:value="*{syoumkigen}">
+							<input type="submit" value="編集">
+							<!--					<input type="image" src="../img/yajirushi.jpeg">-->
+						</div>
+					</form>
+				</li>
+				<li>
+					<form method="get" action="#" th:action="@{/complete}">
+						<div id="input-button" class="input-form">
+							<input type="hidden" name="name1" th:value="*{name1}">
+							<input type="hidden" name="place" th:value="*{place}">
+							<input type="hidden" name="syoumkigen" th:value="*{syoumkigen}">
+							<input type="submit" value="完了画面へ">
+							<!--						<input type="image" src="../img/home.jpeg"alt="矢印">-->
+
+						</div>
+					</form>
+				</li>
+			</ul>
+		</div>
+		<!--		<form method="get" action="#" th:action="@{/input}">-->
+		<!--			<input type="hidden" name="name1" th:value="*{name1}">-->
+		<!--			<input type="hidden" name="place" th:value="*{place}">-->
+		<!--			<input type="hidden" name="syoumkigen" th:value="*{syoumkigen}">-->
+		<!--			<input type="submit" value="入力画面へ">-->
+		<!--		</form>-->
+		<!--		<form method="get" action="#" th:action="@{/complete}">-->
+		<!--			<div id="input-button" class="input-form">-->
+		<!--				<input type="hidden" name="name1" th:value="*{name1}">-->
+		<!--				<input type="hidden" name="place" th:value="*{place}">-->
+		<!--				<input type="hidden" name="syoumkigen" th:value="*{syoumkigen}">-->
+		<!--				<input type="submit" value="完了画面へ">-->
+		<!--			</div>-->
+		<!--		</form>-->
 	</div>
 </body>
 

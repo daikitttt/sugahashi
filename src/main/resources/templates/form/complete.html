@@ -5,19 +5,71 @@
 	<title>Hello</title>
 	<meta charset="utf-8" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
-			rel="stylesheet">
-		<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
 </head>
 
 <body>
 	<h1>かんりょうページ</h1>
 	<p>登録が完了しました！</p>
-	<form method="get" action="#" th:action="@{/index}">
-			<input type="submit" value="ホームへ">
-		</form>
-<!--	<a href="http://localhost:8080/h2-console" target="_blank">H2コンソール(別タブで開く)</a>-->
+	<main>
+		<div class="refrigerator">
+			<p></p>
+			<div class="room-button room-button-1">
+
+				<form method="get" action="#" th:action="@{/top}">
+					<input type="submit" value="冷蔵庫">
+				</form>
+
+			</div>
+			<div class="room-button room-button-2">
+
+				<form method="get" action="#" th:action="@{/middle}">
+					<input type="submit" value="冷凍庫">
+				</form>
+
+			</div>
+			<div class="room-button room-button-3">
+
+				<form method="get" action="#" th:action="@{/bottom}">
+					<input type="submit" value="やさい室">
+				</form>
+
+			</div>
+		</div>
+<!--		<div id="footer" class="complete-footer">-->
+<!--			<ul>-->
+<!--				<li>-->
+					
+<!--						<form method="get" action="#" th:action="@{/index}">-->
+<!--							<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">-->
+<!--						</form>-->
+					
+<!--				</li>-->
+<!--				<li>-->
+
+<!--					<div id="input-button" class="input-first">-->
+<!--						<form method="get" action="#" th:action="@{/input}">-->
+<!--							<input type="submit" value="+">-->
+<!--						</form>-->
+<!--					</div>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</div>-->
+				<div id="input-button" class="input-first">
+					<form method="get" action="#" th:action="@{/input}">
+						<input type="submit" value="+">
+					</form>
+				</div>
+
+
+	</main>
+	<!--	<form method="get" action="#" th:action="@{/index}">-->
+	<!--		<input type="submit" value="ホームへ">-->
+	<!--	</form>-->
+	<!--	<a href="http://localhost:8080/h2-console" target="_blank">H2コンソール(別タブで開く)</a>-->
 </body>
 
 </html>

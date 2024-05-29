@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
-			rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
 	<script src="main.js" th:src="@{/main.js}"></script>
 	<link rel="stylesheet" href="top.css" th:href="@{/top.css}">
 </head>
@@ -25,14 +25,25 @@
 			</li>
 		</ul>
 	</section>
-	<div class="input-button">
-		<form method="get" action="#" th:action="@{/input}">
-			<input type="submit" value="+">
-		</form>
+	<div id="footer" class="complete-footer">
+		<ul>
+			<li>
+
+				<form method="get" action="#" th:action="@{/index}">
+					<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">
+				</form>
+
+			</li>
+			<li>
+
+				<div id="input-button" class="input-first">
+					<form method="get" action="#" th:action="@{/input}">
+						<input type="submit" value="+">
+					</form>
+				</div>
+			</li>
+		</ul>
 	</div>
-	<form method="get" action="#" th:action="@{/index}">
-		<input type="submit" value="ホームへ">
-	</form>
 
 </body>
 

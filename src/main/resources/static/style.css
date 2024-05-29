@@ -92,6 +92,38 @@ header ul li:nth-child(2) {
 
 }
 
+#back-button input[type="submit"] {
+	color: black;
+	/* ボタンのテキスト色 */
+	padding: 0.1rem 0.5rem;
+	/* ボタンの内側の余白 */
+
+	border-radius: 100vh;
+	/* ボタンの角を丸くする */
+	cursor: pointer;
+	/* ボタンのカーソルスタイル */
+/*	font-weight: bold;*/
+	border: 1px solid black;
+	font-size: medium;
+}
+
+
+#back-button input[type="submit"]:hover {
+	color: white;
+	/* ボタンのテキスト色 */
+	padding: 0.1rem 0.5rem;
+	/* ボタンの内側の余白 */
+
+	border-radius: 100vh;
+	/* ボタンの角を丸くする */
+	cursor: pointer;
+	/* ボタンのカーソルスタイル */
+/*	font-weight: bold;*/
+	background-color: black;
+	border: 1px solid white;
+
+}
+
 .input-first input[type="submit"] {
 	font-size: 40px;
 }
@@ -217,9 +249,9 @@ header ul li:nth-child(2) {
 	/* 角を丸める */
 	width: 80%;
 	/*幅も指定できる*/
-	padding: 10% 0;
+	padding: 5% 0;
 	/*余白も指定できる*/
-	margin: 50px 10%;
+	margin: 40px 10%;
 	/*余白も指定できる*/
 }
 
@@ -238,6 +270,10 @@ header ul li:nth-child(2) {
 	font-weight: bold;
 	/*文字を太字に*/
 
+}
+
+.footer-confirm {
+	padding-top: 30px;
 }
 
 /*---------------フッター---------------*/
@@ -280,3 +316,10 @@ header ul li:nth-child(2) {
 	width: auto;
 	height: 30px;
 }
+
+/*---------------completeフッター---------------*/
+
+.small-image-button {
+            width: 50px; /* 画像の幅を50ピクセルに設定 */
+            height: 50px; /* 画像の高さを50ピクセルに設定 */
+        }
