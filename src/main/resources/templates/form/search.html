@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>検索</title>
-<link rel="stylesheet" href="top.css" th:href="@{/top.css}">
+	<meta charset="UTF-8">
+	<title>検索</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="top.css" th:href="@{/top.css}">
 </head>
+
 <body>
-  <h1 >冷蔵庫内検索</h1>
-  <div class="container">
-    
-    <div class="alert alert-warning">
-      <form method="post" action="/search" class="row">
-        <div>
-          <input type="text" class="search-form" name="find" placeholder="名前を入力してください">
-        </div>
-        <div class="col-2 ms-0 ps-0">
-          <input type="submit" class="search-button" value="検索">
-        </div>
-      </form>
-    </div>
-	<p class="searchtitle" th:text="${searchtitle}">検索ページ</p>
-	<div class="search-block">
-	<ul class="top-ul" th:each="item:${data}">
-	          <li class="top-li"  th:text="*{item.name}">名前</li>
-			  <li class="search-place"  th:text="*{item.place}">場所</li>
-	          <li class="syoumikigen" th:text="*{item.syoumikigen}">賞味期限</li>
-	</ul>
+	<h1>けんさく</h1>
+	<div class="container">
+
+		<div class="alert alert-warning">
+			<form method="post" action="/search" class="row">
+				<div>
+					<input type="text" class="search-form" name="find" placeholder="名前を入力してください">
+				</div>
+				<div class="col-2 ms-0 ps-0">
+					<input type="submit" class="search-button" value="検索">
+				</div>
+			</form>
+		</div>
+		<p class="searchtitle" th:text="${searchtitle}">検索ページ</p>
+		<div class="search-block">
+			<ul class="top-ul" th:each="item:${data}">
+				<li class="top-li" th:text="*{item.name}">名前</li>
+				<li class="search-place" th:text="*{item.place}">場所</li>
+				<li class="syoumikigen" th:text="*{item.syoumikigen}">賞味期限</li>
+			</ul>
+		</div>
 	</div>
-  </div>
 </body>
+
 </html>
