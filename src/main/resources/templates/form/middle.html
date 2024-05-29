@@ -8,23 +8,19 @@
 		<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
 			rel="stylesheet">
 	<script src="main.js" th:src="@{/main.js}"></script>
-	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+	<link rel="stylesheet" href="top.css" th:href="@{/top.css}">
 </head>
 
 <body>
 	<h1>れいとうこ</h1>
 	<section class="middle">
 
-		<form method="get" action="#" th:action="@{/middle}">
-			<input type="submit" value="中段へ">
-		</form>
-
-		<ul th:each="res : ${dbList2}">
-			<li th:text="${res.name}">名前</li>
-			<li th:text="${res.syoumikigen}">賞味期限</li>
+		<ul class="top-ul" th:each="res : ${dbList2}">
+			<li class="top-li" th:text="${res.name}">名前</li>
+			<li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
 			<li>
 				<form th:action="@{/del/{id}(id=${res.id})}">
-					<input type="submit" value="削除" />
+					<input class="delete-button" type="submit" value="削除" />
 				</form>
 			</li>
 		</ul>
