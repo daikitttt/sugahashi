@@ -19,7 +19,7 @@
 			<li class="top-li" th:text="${res.name}">名前</li>
 			<li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
 			<li>
-				<form th:action="@{/del/{id}(id=${res.id})}">
+				<form th:action="@{/middledel/{id}(id=${res.id})}">
 					<input class="delete-button" type="submit" value="削除" />
 				</form>
 			</li>
