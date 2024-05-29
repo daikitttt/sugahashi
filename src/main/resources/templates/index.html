@@ -23,47 +23,57 @@
 		<div class="refrigerator">
 			<p></p>
 			<div class="room-button room-button-1">
-				
+
 				<form method="get" action="#" th:action="@{/top}">
 					<input type="submit" value="冷蔵庫">
 				</form>
-				
+
 			</div>
 			<div class="room-button room-button-2">
-				
+
 				<form method="get" action="#" th:action="@{/middle}">
 					<input type="submit" value="冷凍庫">
 				</form>
-			
+
 			</div>
 			<div class="room-button room-button-3">
-				
+
 				<form method="get" action="#" th:action="@{/bottom}">
 					<input type="submit" value="やさい室">
 				</form>
-				
+
 			</div>
 		</div>
-		<div id="input-button" class="input-first">
+		<!--		<div id="input-button" class="input-first">-->
+		<!--			<form method="get" action="#" th:action="@{/input}">-->
+		<!--				<input type="submit" value="+">-->
+		<!--			</form>-->
+		<!--		</div>-->
+		<div id="footer" class="complete-footer">
+			<ul>
+				<li>
+					<div id="input-button" class="input-first">
+						<form method="get" action="#" th:action="@{/index}">
+							<input type="submit" value="?">
+						</form>
+					</div>
+					<!--					<form method="get" action="#" th:action="@{/index}">-->
+					<!--						<input type="submit" value="？">-->
+					<!--						<input type="image" src="../img/search.jpeg" alt="検索" class="small-image-button">-->
+					<!--					</form>-->
+
+				</li>
+				<li>
+
+					<div id="input-button" class="input-first">
 						<form method="get" action="#" th:action="@{/input}">
 							<input type="submit" value="+">
 						</form>
 					</div>
-
-
-	</main>
-
-	<footer>
-		<div id="footer">
-			<ul>
-				<li><a href="index.html"><img src="../img/yajirushi.jpeg" alt="矢印"></a></li>
-				<li><a href="index.html"><img src="../img/home.jpeg" alt="矢印"></a></li>
-				<li><a href="index.html">れいぞう</a></li>
-				<li><a href="index.html">れいとう</a></li>
-				<li><a href="index.html">やさい</a></li>
+				</li>
 			</ul>
 		</div>
-	</footer>
+	</main>
 
 </body>
 

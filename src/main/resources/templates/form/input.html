@@ -14,9 +14,9 @@
 
 <body>
 	<h1>ついかフォーム</h1>
-	<form method="get" action="#" th:action="@{/index}">
-			<input type="submit" value="ホームへ">
-		</form>
+	<!--	<form method="get" action="#" th:action="@{/index}">-->
+	<!--			<input type="submit" value="ホームへ">-->
+	<!--		</form>-->
 	<!--	<form 	method="get"action="#"	th:action="@{/confirm}" th:object="${form}" >-->
 	<!--		賞味期限：<input type="date" name="date">-->
 
@@ -26,7 +26,7 @@
 			<ul>
 				<li>賞味期限：<input type="date" name="syoumkigen"></li>
 				<li>入れる物：<input type="text" name="name1">
-					<select name="place"id ="place">
+					<select name="place" id="place">
 						<option value="冷蔵庫">冷ぞう庫</option>
 
 						<option value="冷凍庫">冷とう庫</option>
@@ -35,10 +35,24 @@
 				</li>
 			</ul>
 			<div id="input-button" class="input-form">
-			<input type="submit" value="登録する">
+				<input type="submit" value="登録する">
 			</div>
 		</form>
 	</div>
+<!--	<footer>-->
+<!--		<div id="footer">-->
+<!--			<ul>-->
+<!--				<li>-->
+<!--					<form method="get" action="#" th:action="@{/index}">-->
+<!--						<input type="image" src="../img/yajirushi.jpeg">-->
+<!--					</form>-->
+<!--				</li>-->
+<!--				<li><a href="../index.html"><img src="../img/yajirushi.jpeg" alt="矢印"></a></li>-->
+<!--				<li><a href="../index.html"><img src="../img/home.jpeg" alt="矢印"></a></li>-->
+				
+<!--			</ul>-->
+<!--		</div>-->
+<!--	</footer>-->
 
 </body>
 
