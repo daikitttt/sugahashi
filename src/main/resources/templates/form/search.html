@@ -12,7 +12,9 @@
 </head>
 
 <body>
-	<h1>けんさく</h1>
+	<div class="top-h1">
+		<h1>けんさく</h1>
+	</div>
 	<div class="container">
 
 		<div class="alert alert-warning">
@@ -32,6 +34,11 @@
 				<li class="search-place" th:text="*{item.place}">場所</li>
 				<li class="syoumikigen" th:text="*{item.syoumikigen}">賞味期限</li>
 			</ul>
+		</div>
+		<div id="input-button" class="input-first">
+			<form method="get" action="#" th:action="@{/index}">
+				<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">
+			</form>
 		</div>
 	</div>
 </body>

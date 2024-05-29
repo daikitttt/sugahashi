@@ -12,34 +12,33 @@
 </head>
 
 <body>
-	<div class="box-h1">
-	<h1>れいぞうこ</h1>
-	
+	<div class="top-h1">
+		<h1>れいぞうこ</h1>
+	</div>
 	<!-- 削除モードに行くボタン -->
 	<form method="get" action="#" th:action="@{/top_del}">
-		<input type="submit" value="-">
+		<input type="submit" value="入れ替え">
 	</form>
-	</div>
 	<section class="top">
 		<ul class="top-ul" th:each="res, stat : ${dbList}">
 			<li class="top-li" th:text="${res.name}">名前</li>
 			<li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
-<!--			<li>-->
-<!--				<form th:action="@{/del/{id}(id=${res.id})}">-->
-<!--					<input class="delete-button" type="submit" value="削除" />-->
-<!--				</form>-->
-<!--			</li>-->
+			<!--			<li>-->
+			<!--				<form th:action="@{/del/{id}(id=${res.id})}">-->
+			<!--					<input class="delete-button" type="submit" value="削除" />-->
+			<!--				</form>-->
+			<!--			</li>-->
 
 		</ul>
 	</section>
 	<div id="footer" class="complete-footer">
 		<ul>
 			<li>
-
-				<form method="get" action="#" th:action="@{/index}">
-					<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">
-				</form>
-
+				<div class="kotei">
+					<form method="get" action="#" th:action="@{/index}">
+						<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">
+					</form>
+				</div>
 			</li>
 			<li>
 

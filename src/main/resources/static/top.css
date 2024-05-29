@@ -1,14 +1,15 @@
 :root {
 	--maincolor: #00afcc;
-	--boxfontcoor: #fdd35c;
+	--topcolor: #a1d8e2;
+	--middlecolor: #84a2d4;
+	--bottomcolor: #bbbcde;
+	--boxcoor: #333;
 }
-
-
 
 body {
 	width: 100%;
 	text-align: center;
-	color: var(--maincolor);
+	color: var(--boxcoor);
 }
 
 /*h1 {*/
@@ -19,12 +20,31 @@ body {
 /*	font-style: normal;*/
 /*}*/
 
-.box-h1 {
-	color: #fff;
+.top-h1,
+.middle-h1,
+.bottom-h1 {
 	font-family: "Darumadrop One", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	background-color: var(--boxfontcoor);
+}
+
+.top-h1 {
+/*	color: #fff;*/
+/*	background-color: var(--topcolor);*/
+	padding: 10px;
+color: var(--maincolor);
+}
+
+.middle-h1 {
+	color: var(--maincolor);
+	padding: 10px;
+/*	background-color: var(--middletcolor);*/
+}
+
+.bottom-h1 {
+	color: var(--maincolor);
+	padding: 10px;
+/*	background-color: var(--bottomcolor);*/
 }
 
 main {
@@ -169,13 +189,13 @@ ul.top-ul {
 	/*点を消す*/
 	margin-right: 13px;
 	display: inline-block;
-	
-	
-	
-	
-	
-	
-/*	border: 1px solid black;*/
+
+
+
+
+
+
+	border: 1px solid black;
 	/* 黒色のボーダー */
 	border-radius: 5px;
 	/* 角を丸める */
@@ -202,7 +222,7 @@ input.search-form {
 	display: inline-block;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	
+
 	width: calc(70% - 30px);
 	border-radius: 10px;
 }
@@ -257,7 +277,7 @@ input.delete-button[type="submit"]:hover {
 	/*縦の表示位置も指定できる*/
 	font-weight: bold;
 	/*文字を太字に*/
-	border: 2px solid var(--boxfontcoor);
+	border: 2px solid var(--boxcoor);
 	/* 枠の設定 */
 	border-radius: 5px;
 	/* 角を丸める */
@@ -307,7 +327,7 @@ input.delete-button[type="submit"]:hover {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	display: flex;
+	/*	display: flex;*/
 	justify-content: space-around;
 	align-items: center;
 }
@@ -333,7 +353,12 @@ input.delete-button[type="submit"]:hover {
 .small-image-button {
 	width: auto;
 	height: 40px;
+
 }
+
+/*.kotei {*/
+/*	position: fixed;*/
+/*}*/
 
 
 /*---------------各ページフッター--------------*/
