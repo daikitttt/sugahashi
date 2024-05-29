@@ -46,15 +46,19 @@ header ul li {
 }
 
 header ul li:first-child {
-    float: left; /* 左寄せ */
-    margin: 30px;
+	float: left;
+	/* 左寄せ */
+	margin: 30px;
 }
 
 /* 二つ目の li 要素 */
 header ul li:nth-child(2) {
-    display: inline-block; /* インラインブロックにする */
-    margin: 0 auto; /* 左右のマージンを自動で調整して真ん中に配置 */
-    float: none; /* float を解除 */
+	display: inline-block;
+	/* インラインブロックにする */
+	margin: 0 auto;
+	/* 左右のマージンを自動で調整して真ん中に配置 */
+	float: none;
+	/* float を解除 */
 }
 
 /*---------------ボタン-----------*/
@@ -90,21 +94,23 @@ header ul li:nth-child(2) {
 
 }
 
-.input-first input[type="submit"]{
-	font-size: 40px;
-}
- .input-first input[type="submit"]:hover{
+.input-first input[type="submit"] {
 	font-size: 40px;
 }
 
-.input-form input[type="submit"]{
-	font-size: 20px;
+.input-first input[type="submit"]:hover {
+	font-size: 40px;
 }
-.input-orm input[type="submit"]:hover{
+
+.input-form input[type="submit"] {
 	font-size: 20px;
 }
 
-.room-button input[type="submit"]{
+.input-orm input[type="submit"]:hover {
+	font-size: 20px;
+}
+
+.room-button input[type="submit"] {
 
 	color: var(--maincolor);
 	/* ボタンのテキスト色 */
@@ -121,7 +127,7 @@ header ul li:nth-child(2) {
 
 }
 
-.room-button input[type="submit"]:hover{
+.room-button input[type="submit"]:hover {
 
 	color: white;
 	/* ボタンのテキスト色 */
@@ -149,28 +155,34 @@ header ul li:nth-child(2) {
 }
 
 /*-----------------top.html用--------------------------*/
-ul.top-ul{
-	list-style-type: none;/*点を消す*/
+ul.top-ul {
+	list-style-type: none;
+	/*点を消す*/
 	margin-right: 13px;
 	display: inline-block;
-    border: 1px solid black; /* 黒色のボーダー */
-    border-radius: 5px; /* 角を丸める */
-    padding: 5px 10px; /* 内側の余白 */    
-    margin-bottom: 10px; /* 下側のマージン */
-    font-size: 23px;
+	border: 1px solid black;
+	/* 黒色のボーダー */
+	border-radius: 5px;
+	/* 角を丸める */
+	padding: 5px 10px;
+	/* 内側の余白 */
+	margin-bottom: 10px;
+	/* 下側のマージン */
+	font-size: 23px;
 }
 
 li.syoumikigen {
-	color:#000;
+	color: #000;
 	font-size: 13px;
 	font-weight: lighter;
 }
 
 li.search-place {
-	color:#000;
+	color: #000;
 	font-size: 13px;
 	font-weight: bold;
 }
+
 input.search-form {
 	display: inline-block;
 	padding-top: 20px;
@@ -179,21 +191,22 @@ input.search-form {
 	width: calc(70% - 30px);
 	border-radius: 10px;
 }
-input.search-button{
+
+input.search-button {
 	display: inline-block;
 	padding: 10px;
 	border-radius: 10px;
-	 width: calc(25% - 30px);
+	width: calc(25% - 30px);
 }
 
-li.top-li{
+li.top-li {
 	font-weight: bold;
 }
 
 div.search-block {
 	border: 2px solid #000;
 	margin-left: 30px;
-	margin-right: 30px; 
+	margin-right: 30px;
 }
 
 p.searchtitle {
@@ -206,8 +219,10 @@ input.delete-button {
 	background-color: #adadad;
 	border-radius: 10px;
 }
+
 input.delete-button[type="submit"]:hover {
-    background-color: #7d7d7d; /* ホバー時の背景色 */
+	background-color: #7d7d7d;
+	/* ホバー時の背景色 */
 }
 
 /*---------------------------------------------------------------------*/
@@ -231,12 +246,14 @@ input.delete-button[type="submit"]:hover {
 	/* 枠の設定 */
 	border-radius: 5px;
 	/* 角を丸める */
-	
+
 }
+
 /*---------------input.html---------------*/
 /*---------------中身追加画面大枠---------------*/
 
-#input-first ul,#input-first table{
+#input-first ul,
+#input-first table {
 	list-style-type: none;
 	/*箇条書きのポッチを消す*/
 	text-align: center;
@@ -252,7 +269,8 @@ input.delete-button[type="submit"]:hover {
 	/*余白も指定できる*/
 }
 
-#input-first ul li ,#input-first table tr{
+#input-first ul li,
+#input-first table tr {
 	display: inline-block;
 	/*inline-blockにします*/
 	width: 80%;
@@ -265,9 +283,62 @@ input.delete-button[type="submit"]:hover {
 	/*縦の表示位置も指定できる*/
 	font-weight: bold;
 	/*文字を太字に*/
-	
+
+}
+
+/*---------------フッター---------------*/
+
+#footer ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#footer ul li {
+	flex: 1;
+	max-width: 80px;
+	padding: 3px 0;
+	margin: 1px 0;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#footer img {
+	width: auto;
+	height: 30px;
+}
+
+/*---------------completeイメージ---------------*/
+
+.small-image-button {
+	width: auto;
+	height: 40px;
 }
 
 
+/*---------------各ページフッター--------------*/
+.complete-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	padding: 5px 0;
+	text-align: center;
+}
 
+.complete-footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
 
+.complete-footer li {
+	margin: 0 5px;
+}
