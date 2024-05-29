@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.dao.SampleDao;
 import com.example.demo.entity.EntForm;
@@ -80,6 +82,17 @@ public class FormController {
 		model.addAttribute("dbList4",list4);
 		return "form/bottom";
 	}
+	
+	@RequestMapping("/search")
+	public String search(Model model, Form form) {
+		model.addAttribute("title", "下段"); 
+		List<EntForm> list3 = sampledao.searchDb3();
+		model.addAttribute("dbList3",list3);
+		List<EntForm> list4 = sampledao.searchDb4();
+		model.addAttribute("dbList4",list4);
+		return "form/search";
+	}
+	
 	@RequestMapping("/del/{id}")
 	public String destory(@PathVariable Long id) {
 		sampledao.deleteDb(id);
@@ -88,8 +101,12 @@ public class FormController {
 	
 	////////////////////////////
 	
-
-    
-
-	
+	// 検索結果を表示するためのメソッド
+    @PostMapping("/search")
+    public String search(@RequestParam("find") String find, Model model) {
+        List<EntForm> list = sampledao.findByName(find);
+        model.addAttribute("searchtitle", "検索結果");
+        model.addAttribute("data", list);
+        return "form/search";
+    }
 }
