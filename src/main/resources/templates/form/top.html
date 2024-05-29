@@ -12,7 +12,9 @@
 </head>
 
 <body>
-	<h1>れいぞうこ</h1>
+	<div class="box-h1">
+		<h1>れいぞうこ</h1>
+	</div>
 	<section class="top">
 		<ul class="top-ul" th:each="res, stat : ${dbList}">
 			<li class="top-li" th:text="${res.name}">名前</li>
