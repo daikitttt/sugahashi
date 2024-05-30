@@ -149,14 +149,9 @@ header ul li:nth-child(2) {
 .room-button input[type="submit"] {
 
 	color: var(--maincolor);
-	/* ボタンのテキスト色 */
 	padding: 0.5rem 2rem;
-	/* ボタンの内側の余白 */
-
 	border-radius: 100vh;
-	/* ボタンの角を丸くする */
 	cursor: pointer;
-	/* ボタンのカーソルスタイル */
 	font-weight: bold;
 	font-size: large;
 	border: 2px solid var(--maincolor);

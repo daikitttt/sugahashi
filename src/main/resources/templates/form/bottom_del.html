@@ -12,20 +12,22 @@
 </head>
 
 <body>
-	<h1>やさいしつ</h1>
+	<div class="top-h1">
+		<h1>やさいしつ</h1>
+	</div>
 	<section class="bottom">
 		<ul class="top-ul" th:each="res : ${dbList3}">
 			<li class="top-li" th:text="${res.name}">名前</li>
 			<li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
 			<li>
-			<form method="post" action="#" th:action="@{/edit}">
-				<input type="hidden" id="name" name="name" th:value="${res.name}">
-				<input type="hidden" id="syoumikigen" name="syoumikigen" th:value="${res.syoumikigen}">
-				<input type="hidden" id="place" name="place" th:value="${res.place}">
-				<input type="submit" value="編集">
-			</form>
+				<form method="post" action="#" th:action="@{/edit}">
+					<input type="hidden" id="name" name="name" th:value="${res.name}">
+					<input type="hidden" id="syoumikigen" name="syoumikigen" th:value="${res.syoumikigen}">
+					<input type="hidden" id="place" name="place" th:value="${res.place}">
+					<input type="submit" value="編集">
+				</form>
 			</li>
-			
+
 			<li>
 				<form th:action="@{/bottomdel/{id}(id=${res.id})}">
 					<input class="delete-button" type="submit" value="削除" />
@@ -33,26 +35,16 @@
 			</li>
 		</ul>
 	</section>
-	<div id="footer" class="complete-footer">
-		<ul>
-			<li>
-
-				<form method="get" action="#" th:action="@{/index}">
-					<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">
-				</form>
-
-			</li>
-			<li>
-
-				<div id="input-button" class="input-first">
-					<form method="get" action="#" th:action="@{/input}">
-						<input type="submit" value="+">
-					</form>
-				</div>
-			</li>
-		</ul>
+	<div class="stop-button-home">
+		<form method="get" action="#" th:action="@{/index}">
+			<input type="image" src="../img/home-black.jpeg" alt="矢印" class="small-image-button">
+		</form>
 	</div>
-
+	<div class="stop-button-input">
+		<form method="get" action="#" th:action="@{/input}">
+			<input type="submit" value="+">
+		</form>
+	</div>
 </body>
 
 </html>

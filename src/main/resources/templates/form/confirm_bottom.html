@@ -8,18 +8,28 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=M+PLUS+2:wght@100..900&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="style.css" th:href="@{/style.css}">
+	<link rel="stylesheet" href="style.css" th:href="@{/top.css}">
 </head>
 
 <body>
-	<h1>かくにん</h1>
-	<form method="get" action="#" th:action="@{/bottom_del}">
-		<input type="submit" value="続けて削除">
-	</form>
-	<form method="get" action="#" th:action="@{/index}">
-		<input type="submit" value="ホームに戻る">
-	</form>	
-	
+	<div class="top-h1">
+		<h1>かくにん</h1>
+	</div>
+	<p class="complete-p">削除が完了しました！</p>
+	<div class="complete-footer">
+		<ul>
+			<li>
+				<form method="get" action="#" th:action="@{/top_del}">
+					<input type="submit" value="続けて削除">
+				</form>
+			</li>
+			<li>
+				<form method="get" action="#" th:action="@{/index}">
+					<input type="submit" value="ホームに戻る">
+				</form>
+			</li>
+		</ul>
+	</div>
 </body>
 
 </html>

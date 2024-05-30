@@ -109,14 +109,9 @@ header ul li:nth-child(2) {
 
 #input-button input[type="submit"]:hover {
 	color: white;
-	/* ボタンのテキスト色 */
 	padding: 0.2rem 1rem;
-	/* ボタンの内側の余白 */
-
 	border-radius: 100vh;
-	/* ボタンの角を丸くする */
 	cursor: pointer;
-	/* ボタンのカーソルスタイル */
 	font-weight: bold;
 	background-color: black;
 	border: 2px solid white;
@@ -135,38 +130,28 @@ header ul li:nth-child(2) {
 	font-size: 20px;
 }
 
-.input-orm input[type="submit"]:hover {
+.input-form input[type="submit"]:hover {
 	font-size: 20px;
 }
 
 .room-button input[type="submit"] {
 
 	color: var(--maincolor);
-	/* ボタンのテキスト色 */
 	padding: 0.5rem 2rem;
-	/* ボタンの内側の余白 */
-
 	border-radius: 100vh;
-	/* ボタンの角を丸くする */
 	cursor: pointer;
-	/* ボタンのカーソルスタイル */
 	font-weight: bold;
 	font-size: large;
 	border: 2px solid var(--maincolor);
 
 }
 
-.room-button input[type="submit"]:hover {
+.room-button input[type="submit"]:hover{
 
 	color: white;
-	/* ボタンのテキスト色 */
 	padding: 0.5rem 2rem;
-	/* ボタンの内側の余白 */
-
 	border-radius: 100vh;
-	/* ボタンの角を丸くする */
 	cursor: pointer;
-	/* ボタンのカーソルスタイル */
 	font-weight: bold;
 	font-size: large;
 	background-color: var(--maincolor);
@@ -179,7 +164,7 @@ header ul li:nth-child(2) {
 }
 
 
-.reset-button input[type="submit"]{
+.reset-button input[type="submit"] {
 	border: 1px solid #333;
 	padding: 10px 15px;
 	border-radius: 50vh;
@@ -217,7 +202,7 @@ header ul li:nth-child(2) {
 	padding: 10px;
 	border: 1px solid #fff;
 	border-radius: 100vh;
-	
+
 }
 
 .stop-button-input {
@@ -225,16 +210,18 @@ header ul li:nth-child(2) {
 	right: 10%;
 	z-index: 1000;
 }
+
 .stop-button-input input[type="submit"] {
 	color: #fff;
 	border-radius: 100vh;
-	cursor: pointer;	
+	cursor: pointer;
 	border: 2px solid #fff;
 	font-size: 40px;
 	font-weight: bold;
 	padding: 0.2rem 1rem;
 	background-color: #333;
 }
+
 .stop-button-input input[type="submit"]:hover {
 	color: #333;
 	padding: 0.2rem 1rem;
@@ -245,6 +232,7 @@ header ul li:nth-child(2) {
 	border: 2px solid #333;
 
 }
+
 .small-image-button,
 .stop-button-home,
 .stop-button-input {
@@ -363,18 +351,13 @@ input.delete-button[type="submit"]:hover {
 #input-first ul,
 #input-first table {
 	list-style-type: none;
-	/*箇条書きのポッチを消す*/
 	text-align: center;
 	border: 2px solid #000;
-	/* 枠の設定 */
 	border-radius: 5px;
-	/* 角を丸める */
 	width: 80%;
-	/*幅も指定できる*/
 	padding: 10% 0;
-	/*余白も指定できる*/
 	margin: 50px 10%;
-	/*余白も指定できる*/
+
 }
 
 #input-first ul li,
@@ -394,32 +377,33 @@ input.delete-button[type="submit"]:hover {
 
 }
 
+
 /*---------------フッター---------------*/
 
-#footer ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	/*	display: flex;*/
-	justify-content: space-around;
-	align-items: center;
-}
+/*#footer ul {*/
+/*	list-style-type: none;*/
+/*	padding: 0;*/
+/*	margin: 0;*/
+/*	justify-content: space-around;*/
+/*	align-items: center;*/
+/*}*/
 
-#footer ul li {
-	flex: 1;
-	max-width: 80px;
-	padding: 3px 0;
-	margin: 1px 0;
-	font-weight: bold;
-	color: white;
-	text-align: center;
-	box-sizing: border-box;
-}
+/*#footer ul li {*/
+/*	flex: 1;*/
+/*	max-width: 80px;*/
+/*	padding: 3px 0;*/
+/*	margin: 1px 0;*/
+/*	font-weight: bold;*/
+/*	color: white;*/
+/*	text-align: center;*/
+/*	box-sizing: border-box;*/
+/*}*/
 
-#footer img {
-	width: auto;
-	height: 30px;
-}
+/*#footer img {*/
+/*	width: auto;*/
+/*	height: 30px;*/
+/*}*/
+
 
 /*---------------completeイメージ---------------*/
 
@@ -430,23 +414,53 @@ input.delete-button[type="submit"]:hover {
 }
 
 /*---------------各ページフッター--------------*/
-.complete-footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	background-color: #fff;
-	padding: 5px 0;
-	text-align: center;
+.complete-footer ul{
+	list-style-type: none;
+	margin: 0 0;
+	padding: 0 0;
+}
+.complete-footer input[type="submit"] {
+	color: var(--maincolor);
+	padding: 0.5rem 2rem;
+	border-radius: 100vh;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: large;
+	border: 2px solid var(--maincolor);
+	list-style-type: none;
+
 }
 
-.complete-footer ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
+.complete-footer ul input[type="submit"]:hover {
+color: white;
+	padding: 0.5rem 2rem;
+	border-radius: 100vh;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: large;
+	background-color: var(--maincolor);
+	border: 2px solid white;
+	list-style-type: none;
 }
 
-.complete-footer li {
-	margin: 0 5px;
+.complete-footer ul li {
+	margin: 20px 0px;
 }
+
+.complete-p {
+	margin: 2.5rem 0;
+	color: var(--maincolor);
+}
+
+.ms-0 input[type="submit"]{
+	color: var(--maincolor);
+	border: 2px solid var(--maincolor);
+}
+
+.ms-0 input[type="submit"]:hover{
+	color: #fff;
+	border: 2px solid #fff;
+	background-color: var(--maincolor);
+}
+
+

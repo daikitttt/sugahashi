@@ -12,7 +12,9 @@
 </head>
 
 <body>
-	<h1>れいぞうこ</h1>
+	<div class="top-h1">
+		<h1>れいぞうこ</h1>
+	</div>
 	<section class="top">
 		<ul class="top-ul" th:each="res, stat : ${dbList}">
 			<li class="top-li" th:text="${res.name}">名前</li>
@@ -33,31 +35,16 @@
 
 		</ul>
 	</section>
-	<div id="footer" class="complete-footer">
-		<ul>
-			<li>
-
-				<form method="get" action="#" th:action="@{/index}">
-					<input type="image" src="../img/home.jpeg" alt="矢印" class="small-image-button">
-				</form>
-
-			</li>
-			<li>
-
-				<div id="input-button" class="input-first">
-					<form method="get" action="#" th:action="@{/input}">
-						<input type="submit" value="+">
-					</form>
-				</div>
-			</li>
-		</ul>
+	<div class="stop-button-home">
+		<form method="get" action="#" th:action="@{/index}">
+			<input type="image" src="../img/home-black.jpeg" alt="矢印" class="small-image-button">
+		</form>
 	</div>
-	<!--    <form method="get" action="#" th:action="@{/input}">-->
-	<!--        <input type="submit" value="入力画面へ">-->
-	<!--    </form>-->
-	<!--    <form method="get" action="#" th:action="@{/index}">-->
-	<!--        <input type="submit" value="ホームへ">-->
-	<!--    </form>-->
+	<div class="stop-button-input">
+		<form method="get" action="#" th:action="@{/input}">
+			<input type="submit" value="+">
+		</form>
+	</div>
 </body>
 
 </html>
