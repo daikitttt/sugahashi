@@ -22,9 +22,9 @@
 
 	<!--	    </form>-->
 	<div id="input-first">
-		<form method="get" action="#" th:action="@{/edit/{id}(id=${res.id})}" th:object="${form}">
+		<form method="get" action="#" th:action="@{/edit/{id}/exe(id=${form.id})}" th:object="${form}">
 			<ul>
-				<li>賞味期限：<input type="date" name="syoumkigen" th:value="${syoumikigen}"></li>
+				<li>賞味期限：<input type="date" name="syoumikigen" th:value="${syoumikigen}"></li>
 				<li>入れる物：<input type="text" name="name" th:value="${name}">
 					<select name="place" id="place" >
 						<option value="冷蔵庫">冷ぞう庫</option>
