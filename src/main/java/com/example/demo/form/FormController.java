@@ -163,7 +163,7 @@ public class FormController {
 //		List<EntForm> list1 = sampledao.selectOne(id);
 //		return "redirect:/index";
 //	}
-	
+//	
 	// 検索結果を表示するためのメソッド
     @PostMapping("/search")
     public String search(@RequestParam("find") String find, Model model) {
@@ -173,15 +173,40 @@ public class FormController {
         return "form/search";
     }
     
-    @RequestMapping("/edit/{id}")
-	public String editExe(@PathVariable Long id, Model model, Form form) {
-		//フォームの値をエンティティに入れ直し
-		EntForm entform = new EntForm();
-		//取得できているかの確認
-		entform.setName(form.getName1());
-		//更新の実行
-		sampledao.updateDb(id,entform);
-		//一覧画面へリダイレクト
-		return "redirect:/index";
-	}
+//  //更新画面の表示(SELECT)
+//  		@RequestMapping("/edit/{id}")
+//  		public String editView(@PathVariable Long id, Model model) {
+//  			
+//  			//DBからデータを1件取ってくる(リストの形)
+//  			List<EntForm> list = sampledao.selectOne(id);
+//
+//  			
+//  			if (list.isEmpty()) {
+//  		        // エラーメッセージを設定してリダイレクトするか、エラーページを表示
+//  		        model.addAttribute("errorMessage", "指定されたIDのデータが見つかりません");
+//  		        return "error";
+//  		    }
+//  			
+//  			//リストから、オブジェクトだけをピックアップ
+//  			EntForm entformdb = list.get(0);
+//  			
+//  			 model.addAttribute("form", entformdb);
+//  		    model.addAttribute("title", "編集ページ");
+//  		    return "form/edit";
+//  			
+//
+//  			
+//  		}
+//  		//更新処理(UPDATE)
+//  		@RequestMapping("/edit/{id}/exe")
+//  		public String editExe(@PathVariable Long id, Model model, Form form) {
+//  			//フォームの値をエンティティに入れ直し
+//  			EntForm entform = new EntForm();
+//  			System.out.println(form.getName1());//取得できているかの確認
+//  			entform.setName(form.getName1());
+//  			//更新の実行
+//  			sampledao.updateDb(id,entform);
+//  			//一覧画面へリダイレクト
+//  			return "redirect:/index";
+//  		}
 }

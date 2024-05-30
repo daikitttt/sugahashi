@@ -19,14 +19,14 @@
 		<ul class="top-ul" th:each="res, stat : ${dbList}">
 			<li class="top-li" th:text="${res.name}">名前</li>
 			<li class="syoumikigen" th:text="${res.syoumikigen}">賞味期限</li>
-			<li>
-				<form method="post" action="#" th:action="@{/edit}">
-					<input type="hidden" id="name" name="name" th:value="${res.name}">
-					<input type="hidden" id="syoumikigen" name="syoumikigen" th:value="${res.syoumikigen}">
-					<input type="hidden" id="place" name="place" th:value="${res.place}">
-					<input type="submit" value="編集">
-				</form>
-			</li>
+<!--			<li>-->
+<!--				<form method="post" action="#" th:action="@{/edit}">-->
+<!--					<input type="hidden" id="name" name="name" th:value="${res.name}">-->
+<!--					<input type="hidden" id="syoumikigen" name="syoumikigen" th:value="${res.syoumikigen}">-->
+<!--					<input type="hidden" id="place" name="place" th:value="${res.place}">-->
+<!--					<input type="submit" value="編集">-->
+<!--				</form>-->
+<!--			</li>-->
 			<li>
 				<form th:action="@{/topdel/{id}(id=${res.id})}">
 					<input class="delete-button" type="submit" value="削除" />
